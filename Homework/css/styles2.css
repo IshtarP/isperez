@@ -33,6 +33,10 @@ body {
     background: url("/isperez/Homework/img/computer.png"); /* New css property not used in lab 1 */
     
 }
+#coding {
+     background: url("/isperez/Homework/img/computer.png"); /* New css property not used in lab 1 */
+    
+}
 #table-header {
     color: black;
     background-color: white;
@@ -60,12 +64,7 @@ body {
 #image4 {
     text-align: left;
 }
-/*
-#footer {
-    color: white;
-    text-align: center;
-    font-size:.7em;
-}*/
+
 #school {
     position: center;
     color: white;
@@ -85,6 +84,7 @@ body {
 }
 #paragraph3 {
     color:white;
+    font-size: 20px;
 }
 #table-header {
     text-align: center;

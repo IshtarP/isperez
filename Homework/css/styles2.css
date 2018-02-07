@@ -1,0 +1,101 @@
+
+h1 {
+    font-size: 40px;
+    font-family: 'Pacifico', cursive;
+    color: black;
+    text-align: center;
+}
+nav {
+    text-align: center;
+}
+    
+nav a{
+    text-align: center;
+    padding:15px;
+    padding-bottom: 4px;
+    color: white;
+    font-size: 25px;
+    font-family: fantasy;
+    text-decoration: none; /* Removes the line */
+    
+  
+}
+
+nav a:hover, #current {
+    font-size: 20px;
+    transition: .9s;
+    border-bottom-style: groove;
+    border-color: silver;
+
+}
+
+body {
+    background: url("/isperez/Homework/img/computer.png"); /* New css property not used in lab 1 */
+    
+}
+#table-header {
+    color: black;
+    background-color: white;
+    
+}
+
+#colorful {
+    background-color: white;
+}
+#image2 {
+    text-align: left;
+    padding: 20px;
+    
+    
+}
+#image1 {
+    text-align: left;
+    padding:  20px;
+    
+}
+#image3 {
+    text-align: center;
+
+}
+#image4 {
+    text-align: left;
+}
+/*
+#footer {
+    color: white;
+    text-align: center;
+    font-size:.7em;
+}*/
+#school {
+    position: center;
+    color: white;
+}
+#paragraph{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}    
+
+
+#paragraph2 {
+    text-align: right;
+    padding-right: 450px;
+    color:white;
+    font-size: 20px;
+}
+#paragraph3 {
+    color:white;
+}
+#table-header {
+    text-align: center;
+    font-size: medium;
+}
+.table-row {
+    background-color: silver;
+    
+}
+#table {
+    text-align: left;
+    padding-left: 380px;
+
+}

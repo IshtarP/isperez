@@ -30,7 +30,7 @@ nav a:hover, #current {
 }
 
 body {
-    background: url("/isperez/Homework/img/computer.png"); /* New css property not used in lab 1 */
+    background: url("../img/computer.png"); /* New css property not used in lab 1 */
     
 }
 

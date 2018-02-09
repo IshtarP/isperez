@@ -1,0 +1,24 @@
+[09-Feb-2018 07:34:30 UTC] PHP Parse error:  syntax error, unexpected 'img' (T_STRING), expecting ',' or ';' in /home/ubuntu/workspace/isperez/labs/Lab2/index.php on line 11
+[09-Feb-2018 08:22:30 UTC] PHP Warning:  rand() expects exactly 2 parameters, 1 given in /home/ubuntu/workspace/isperez/labs/Lab2/index.php on line 11
+[09-Feb-2018 08:22:30 UTC] PHP Stack trace:
+[09-Feb-2018 08:22:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/labs/Lab2/index.php:0
+[09-Feb-2018 08:22:30 UTC] PHP   2. rand() /home/ubuntu/workspace/isperez/labs/Lab2/index.php:11
+[09-Feb-2018 08:26:32 UTC] PHP Warning:  rand() expects exactly 2 parameters, 1 given in /home/ubuntu/workspace/isperez/labs/Lab2/index.php on line 14
+[09-Feb-2018 08:26:32 UTC] PHP Stack trace:
+[09-Feb-2018 08:26:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/labs/Lab2/index.php:0
+[09-Feb-2018 08:26:32 UTC] PHP   2. rand() /home/ubuntu/workspace/isperez/labs/Lab2/index.php:14
+[09-Feb-2018 08:29:31 UTC] PHP Warning:  rand() expects parameter 1 to be long, string given in /home/ubuntu/workspace/isperez/labs/Lab2/index.php on line 11
+[09-Feb-2018 08:29:31 UTC] PHP Stack trace:
+[09-Feb-2018 08:29:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/labs/Lab2/index.php:0
+[09-Feb-2018 08:29:31 UTC] PHP   2. rand() /home/ubuntu/workspace/isperez/labs/Lab2/index.php:11
+[09-Feb-2018 15:04:12 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/isperez/labs/Lab2/index.php on line 43
+[09-Feb-2018 15:04:15 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/isperez/labs/Lab2/index.php on line 43
+[09-Feb-2018 15:04:17 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/isperez/labs/Lab2/index.php on line 43
+[09-Feb-2018 15:04:47 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/isperez/labs/Lab2/index.php on line 43
+[09-Feb-2018 15:04:49 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/isperez/labs/Lab2/index.php on line 43
+[09-Feb-2018 15:14:48 UTC] PHP Fatal error:  Call to undefined function displaySymbol1() in /home/ubuntu/workspace/isperez/labs/Lab2/index.php on line 32
+[09-Feb-2018 15:14:48 UTC] PHP Stack trace:
+[09-Feb-2018 15:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/labs/Lab2/index.php:0
+[09-Feb-2018 18:07:29 UTC] PHP Fatal error:  Call to undefined function displaySymbol1() in /home/ubuntu/workspace/isperez/labs/Lab2/index.php on line 32
+[09-Feb-2018 18:07:29 UTC] PHP Stack trace:
+[09-Feb-2018 18:07:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/labs/Lab2/index.php:0

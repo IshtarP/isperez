@@ -3,14 +3,14 @@
     img {
         border-radius:20px;
     }
-    
+
     body {
         background-color: black;
         background-image:url("../img/bg7.jpg");
         color: white;
-        
+
     }
-    
+
     #main {
         font-family: 'Baloo Bhaina', cursive;
         background-image:url("../img/machine.png");
@@ -19,12 +19,12 @@
         position:relative;
         margin:0 auto;
     }
-    
+
     #reel1, #reel2, #reel3 {
         top:248px;
         position:absolute;
     }
-    
+
     #reel1{
         left:145px;
     }
@@ -34,7 +34,7 @@
     #reel3{
         left:357px;
     }
-    
+
     input{
         top:75px;
         left:530px;
@@ -47,9 +47,9 @@
         color:yellow;
         cursor:pointer;
     }
-    
+
     #output{
-     width:600px;   
+     width:600px;
      margin:0 auto;
      position:absolute;
      text-align:center;
@@ -57,7 +57,7 @@
      font-size:1.5em;
      line-height: .7em;
     }
-    
+
     footer{
         font-family: "Times New Roman", Georgia, Serif;
         font-size:.8em;
@@ -65,3 +65,9 @@
         margin:0 auto;
         padding-top:10px;
     }
+    
+    #fix {
+        
+        position:fixed;
+    }
+

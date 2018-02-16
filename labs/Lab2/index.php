@@ -3,55 +3,35 @@
     <head>
         <title> Lab 2: 777 Slot Machine </title>
         <meta charset="utf-8" />
+        <style type="text/css">
+            @import url("css/styles.css");
+        </style>
     </head>
     <body>
-        
-        <?php
-        
-        function displaySymbol1($randomValue) {
+        <div id ="main">
             
-            //$randomValue = rand(0,2);
-            echo $randomValue;
-            
-            if ($randomValue == 0) {
-                $symbol = "seven";
-            
-            } else if ($randomValue == 1) {
-                
-                $symbol = "orange";
-            } else {
-                $symbol = "cherry";
-            }
+            <!--<img src='img/lemon.png' alt='Lemon' title='Lemon' width='70px' >
+            <img src='img/cherry.png' alt='Cherry' title='Cherry' ='70px' >
+            <img src='img/seven.png' alt='Seven' title='Seven' width='70px'>-->
+            <?php
+             
+            include 'inc/functions.php';
+            play();
+            ?>
+        </div>
         
-            
-            echo "<img src='img/$symbol.png' width='70 alt='$symbol' title='$symbol' />"; // Image 
-            
-        }
         
-        $randomValue1 = rand(0,2);
-        displaySymbol1($randomValue1);
-        $randomValue2 = rand(0,2);
-        displaySymbol1($randomValue2);
-        $randomValue3 = rand(0,2);
-        displaySymbol1($randomValue3);
+        <div id="fix">
+            <form>
+                <input type="submit" value="Spin"/>
+            </form>
         
-        // Can also use a for loop which makes the code look cleaner 
-        //
-        //for ($i=0; $i < 3; $i++) {
-        //    displaySymbol();
-       // }
+        </div>
         
-        //displaySymbol();
-        //displaySymbol();
-        //displaySymbol();
-           
+       
+         <footer>
+             
+         </footer>
         
-        ?>
-        
- <!--   <img src="img/lemon.png" width="70" alt="Lemon" title="Lemon" />
-        <img src="img/cherry.png" width="70" alt="Cherry" title="Cherry" />
-        <img src="img/orange.png" width="70" alt="Orange" title="Oreange" />
-        
--->
     </body>
 </html>

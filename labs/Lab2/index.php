@@ -20,12 +20,11 @@
             ?>
         </div>
         
-        
-        <div id="fix">
             <form>
                 <input type="submit" value="Spin"/>
             </form>
-        
+        <div>
+            
         </div>
         
        

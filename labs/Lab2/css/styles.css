@@ -37,10 +37,10 @@
 
     input{
         top:75px;
-        left:530px;
+        left:950px;
         position:absolute;
         font-size:1.3em;
-        background-color: Transparent;
+        background-color: transparent;
         border:none;
         outline:none; /*hides button outline when clicking on it*/
         font-weight:bold;
@@ -66,8 +66,4 @@
         padding-top:10px;
     }
     
-    #fix {
-        
-        position:fixed;
-    }
-
+    

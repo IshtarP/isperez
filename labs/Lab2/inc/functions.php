@@ -14,6 +14,9 @@ function displaySymbol($randomValue, $pos) {
                 break;
         case 2: $symbol = "cherry";
                 break;
+        case 3: $symbol = "orange";
+                break;
+                
     }
     
     echo "<img id='reel$pos' src='img/$symbol.png'  alt='$symbol' title='". ucfirst($symbol) ."'width='70'>";
@@ -27,11 +30,11 @@ function displayPoints($randomValue1, $randomValue2, $randomValue3) {
             case 0: $totalPoints = 1000;
                     echo "<h1>Jackpot!</h1>";
                 break;
-            
             case 1: $totalPoints = 500;
-        
                 break;
             case 2: $totalPoints = 250;
+                break;
+            case 3: $totalPoints = 900;
                 break;
         }
         echo "<h2> You won $totalPoints Points</h2>";
@@ -46,7 +49,7 @@ function displayPoints($randomValue1, $randomValue2, $randomValue3) {
 
  function play() {
     for ($i=1; $i<4; $i++) {
-        ${"randomValue" . $i} = rand(0,2);
+        ${"randomValue" . $i} = rand(0,3);
         displaySymbol(${"randomValue". $i}, $i);
     }
               

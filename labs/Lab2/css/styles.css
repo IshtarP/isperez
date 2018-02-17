@@ -45,7 +45,7 @@
         outline:none; /*hides button outline when clicking on it*/
         font-weight:bold;
         color:yellow;
-        cursor:pointer;
+        cursor: pointer;
     }
 
     #output{
@@ -63,7 +63,9 @@
         font-size:.8em;
         width:600px;
         margin:0 auto;
-        padding-top:10px;
+        padding-top:50px;
     }
-    
+    #school {
+        text-align:fixed;
+    }
     

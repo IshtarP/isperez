@@ -20,16 +20,24 @@
             ?>
         </div>
         
+            
+        <div>
             <form>
                 <input type="submit" value="Spin"/>
             </form>
-        <div>
-            
         </div>
         
-       
+        <!-- This is the footer -->
          <footer>
-             
+             <hr id="footer">
+             CST336. 2017&copy; Perez <br/>
+             <strong>Disclaimer:</strong>
+             The information in this webpage is fictious.<br/>
+             It is used for academic purposes only.
+             </hr>
+             <br/>
+             <br>
+             <img id="school" src="img/CSUMB.png" alt="Picture of Csumb logo" />
          </footer>
         
     </body>

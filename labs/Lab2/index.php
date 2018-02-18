@@ -9,10 +9,6 @@
     </head>
     <body>
         <div id ="main">
-            
-            <!--<img src='img/lemon.png' alt='Lemon' title='Lemon' width='70px' >
-            <img src='img/cherry.png' alt='Cherry' title='Cherry' ='70px' >
-            <img src='img/seven.png' alt='Seven' title='Seven' width='70px'>-->
             <?php
              
             include 'inc/functions.php';
@@ -26,6 +22,10 @@
                 <input type="submit" value="Spin"/>
             </form>
         </div>
+        
+        <image>
+            <img id="buddy" src="img/buddy_verified.png" alt="Picture of the buddy badge" />
+        </image>
         
         <!-- This is the footer -->
          <footer>

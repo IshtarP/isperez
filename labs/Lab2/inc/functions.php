@@ -34,7 +34,7 @@ function displayPoints($randomValue1, $randomValue2, $randomValue3) {
                 break;
             case 2: $totalPoints = 250;
                 break;
-            case 3: $totalPoints = 900;
+            case 3: $totalPoints = 900; // Added points for the orange
                 break;
         }
         echo "<h2> You won $totalPoints Points</h2>";

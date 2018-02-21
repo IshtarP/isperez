@@ -1,5 +1,6 @@
 <?php
 
+// Displays the images
 function displaySymbol($randomValue, $pos) {
     
     /*for($i=1; $i<4; $i++) {

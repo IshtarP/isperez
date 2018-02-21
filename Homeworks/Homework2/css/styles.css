@@ -1,0 +1,62 @@
+    @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
+
+h1 {
+    text-align:center;
+    color:silver;
+    font-size:45px;
+    font-family: cursive;
+    text-decoration:underline;
+}
+
+body {
+    background:url("../img/cool.png");
+}
+footer {
+    position:relative;
+    margin:0 auto;
+    padding-top: 100px;
+    color:silver;
+}
+#main {
+    font-family: 'Baloo Bhaina', cursive;
+    position:relative;
+    margin:0 auto;
+}
+
+input {
+    top:75px;
+    left:950px;
+    position:right;
+    font-size:1.3em;
+    background-color: transparent;
+    border:none;
+    outline:none; /*hides button outline when clicking on it*/
+    font-weight:bold;
+    color:red;
+    cursor: pointer;
+}
+output {
+    width:600px;
+     margin:0 auto;
+     position:absolute;
+     text-align:center;
+     top:450px;
+     font-size:1.5em;
+     line-height: .7em;
+}
+#test {
+    /*width:300px;*/
+     margin:0 auto;
+     /*position:absolute;*/
+     text-align:center;
+     top:450px;
+     font-size:1.5em;
+     line-height: .7em;
+}
+#player2{
+    text-align: center;
+}
+#player1 {
+    text-align: left;
+    padding-left: 250px;
+}

@@ -2,7 +2,7 @@
         opacity:0.9;
         width:100%;
         text-align:center;
-        color:yellow;
+        color:maroon;
     }
     
     input {
@@ -11,6 +11,12 @@
     }
     
     #carousel-example-generic {
-         margin: 0 auto;   
-         width: 700px;
+        margin: 0 auto;   
+        width: 700px;
     }
+    .try {
+         float:center;
+         
+           
+    }
+  

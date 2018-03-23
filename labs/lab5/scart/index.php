@@ -1,13 +1,58 @@
 <?php
     include 'functions.php';
     
-    // Checks to see if the form is submitted
+    // Starts the session in any php file where sessions will be used
+    session_start();
+    
+    // Create an array in the Session to hold the cart items
+    if(!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = array();
+    }
+    
+     // Checks to see if the form is submitted
     if(isset($_GET['query'])) {
         // Get access to our API function
         include 'wmapi.php';
         $items = getProducts($_GET['query']);
      
     }
+    
+    // Checks to see if an item has been added to the cart
+    if(isset($_POST['$itemName'])) {
+        
+        // Creating an array to hold an item's properties
+        $newItem = array();
+        $newItem['name'] = $_POST['itemName'];
+        $newItem['id'] = $_POST['ItemId'];
+        $newItem['price'] = $_POST['itemPrice'];
+        $newItem['image'] = $_POST['itemImage'];
+        
+        // Storing the item array in the cart array
+        array_push($_SESSION['cart'], $newItem);
+        
+       // $_SESSION['cart'] = $_POST['itemName'];
+    }
+    
+    // Check to see if other items with this id are in the array
+    // if so, this item isn't new. Only update quantity
+    // Must be passed by reference so that each item can be updated!
+    foreach ($_SESSION['cart'] as &$item) {
+        if($newItem['id'] == $item['id']) {
+            $item['quantity'] += 1;
+            $found = true;
+        }
+    }
+    
+    //else add it to the array
+    if ($found != true) {
+        $newItem['quantity'] = 1;
+        array_push($_SESSION['cart'], $newItem);
+    }
+    
+   
+    
+   
+  
     
     
     
@@ -38,6 +83,8 @@
                     <ul class='nav navbar-nav'>
                         <li><a href='index.php'>Home</a></li>
                         <li><a href='scart.php'>Cart</a></li>
+                        <span class='glyphicon glyphicon-shopping-cart' aria-hidden='true'>
+                            </span>Cart: <?php displayCartCount(); ?> </a></li>
                     </ul>
                 </div>
             </nav>

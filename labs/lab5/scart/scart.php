@@ -1,4 +1,31 @@
-<!DOCTYPE html>
+<?php
+    
+    include 'functions.php';
+    
+    // If 'removeId' has been sent, search the cart for that itemId and unset it
+    if(isset($_POST['removeId'])) {
+        foreach($_SESSION['cart'] as $itemKey => $item) {
+            if($item['id'] == $_POST['removeId']) {
+                unset($_SESSION['cart'][$itemKey]);
+            }
+        }
+    }
+    
+    // If 'itemId quantity has been sent, search for the item with that ID and update quantity'
+    if(isset($_POST['itemId'])) {
+        foreach($_SESSION['cart'] as &$item) {
+            if($item['id'] == $_POST['itemID']) {
+                $item['quantity'] = $_POST['update'];
+            }
+        }
+    }
+
+
+?>
+
+
+
+DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -11,7 +38,7 @@
     </head>
     <body>
         <div class='container'>
-            <div class='text-center'>
+            <div class='text-center'> 
                 
                 <!-- Bootstrap Navagation Bar -->
                 <nav class='navbar navbar-default - navbar-fixed-top'>
@@ -28,6 +55,10 @@
                 <br /> <br /> <br />
                 <h2>Shopping Cart</h2>
                 <!-- Cart Items -->
+                <?php
+                    displayCart();
+                
+                ?>
 
             </div>
         </div>

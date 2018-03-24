@@ -11,9 +11,12 @@
     
      // Checks to see if the form is submitted
     if(isset($_GET['query'])) {
+     
         // Get access to our API function
         include 'wmapi.php';
+        echo $_GET['query'];
         $items = getProducts($_GET['query']);
+     
      
     }
     
@@ -27,10 +30,7 @@
         $newItem['price'] = $_POST['itemPrice'];
         $newItem['image'] = $_POST['itemImage'];
         
-        // Storing the item array in the cart array
-        array_push($_SESSION['cart'], $newItem);
-        
-       // $_SESSION['cart'] = $_POST['itemName'];
+       
     }
     
     // Check to see if other items with this id are in the array

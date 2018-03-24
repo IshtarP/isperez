@@ -1,19 +1,15 @@
 <?php
 
-    function displayCartCount() {
-        echo count($_SESSION['cart']);
-        
-    }
-
-
+ 
      // If the 'itemName' is set, put it in the session cart and direct the user to the shopping cart
     function displayCart() {
         if(isset($_SESSION['cart'])) {
+            
             echo "<table class='table'>";
             foreach ($_SESSION['cart'] as $item) {
-                $itemName = $item['name'];
-                $itemPrice = $item['price'];
-                $itemImage = $item['image'];
+                //$itemName = $item['name'];
+               // $itemPrice = $item['price'];
+                //$itemImage = $item['image'];
                 $itemId = $item['id'];
                 $itemQuant = $item['quantity'];
                 
@@ -21,9 +17,9 @@
                 
                 // Display item as table row
                 echo "<tr>";
-                echo "<td><img src='$itemImage'></td>";
-                echo "<td><h4>$itemName</h4></td>";
-                echo "<td><h4>$itemPrice</h4></td>";
+                echo "<td><img src='" . $item['image'] . "'></td>";
+                echo "<td><h4>$" . $item['name'] . "</h4></td>";
+                echo "<td><h4>$" . $item['price'] . "</h4></td>";
                 //echo "<td><h4>$itemQuant</h4></td>";
                 
                 
@@ -47,16 +43,19 @@
         }
     }
     
-    
-    
-    
-    
-    
-    
-    function displayResults() {
-        global $items; // Necessary to get the global items array
+      function displayCartCount() {
+        echo count($_SESSION['cart']);
         
+    }
+    
+    
+
+    function displayResults() {
+        
+        global $items; // Necessary to get the global items array
+       
         if(isset($items)) {
+           
             echo "<table class='table'>";
             foreach ($items as $item) {
                 $itemName = $item['name'];
@@ -71,7 +70,7 @@
                 echo "<td><h4>$itemPrice</h4></td>";
                 
                 
-                // Hidden input element containing the item name
+                // Hidden input element containing the item name to send via POST
                 echo "<form method='post'>";
                 echo "<input type='hidden' name='itemName value='$itemName'>";
                 echo "<input type='hidden' name='itemPrice value='$itemPrice'>";

@@ -2,6 +2,9 @@
     
     include 'functions.php';
     
+    // Start the session in any php file where you will be using sessions
+    session_start();
+    
     // If 'removeId' has been sent, search the cart for that itemId and unset it
     if(isset($_POST['removeId'])) {
         foreach($_SESSION['cart'] as $itemKey => $item) {

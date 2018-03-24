@@ -17,6 +17,13 @@
                 $itemQuant = $item['quantity'];
                 
                 
+                // for some reason the fist item wasn't display it's quanitty
+                // fix for now
+                if($itemQuant == '' || $itemQuant == null) {
+                    $itemQuant = 1;
+                }
+                
+                
                 
                 // Display item as table row
                 echo "<tr>";
@@ -37,7 +44,7 @@
                 echo "<form method='post'>";
                 echo "<input type='hidden' name='removeId' value='$itemId'>";
                 echo "<td><button class='btn btn-danger'>Remove</button></td>";
-                echo "</from>";
+                echo "</form>";
                 
                 
                 echo "</tr>";

@@ -17,7 +17,7 @@
     // If 'itemId quantity has been sent, search for the item with that ID and update quantity'
     if(isset($_POST['itemId'])) {
         foreach($_SESSION['cart'] as &$item) {
-            if($item['id'] == $_POST['itemID']) {
+            if($item['id'] == $_POST['itemId']) {
                 $item['quantity'] = $_POST['update'];
             }
         }
@@ -28,7 +28,7 @@
 
 
 
-DOCTYPE html>
+<DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -51,7 +51,10 @@ DOCTYPE html>
                         </div>
                         <ul class='nav navbar-nav'>
                             <li><a href='index.php'>Home</a></li>
-                            <li><a href='scart.php'>Cart</a></li>
+                            <li><a href='scart.php'>
+                            <span class='glyphicon glyphicon-shopping-cart' aria-hidden='true'>
+                            </span>  Cart: <?php displayCartCount(); ?> </a></li>  
+                                
                         </ul>
                     </div>
                 </nav>
@@ -60,6 +63,7 @@ DOCTYPE html>
                 <!-- Cart Items -->
                 <?php
                     displayCart();
+                   
                 
                 ?>
 

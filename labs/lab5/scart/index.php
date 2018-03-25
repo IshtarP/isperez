@@ -9,12 +9,7 @@
         $_SESSION['cart'] = array();
     }
     
-    // Check to see if an item has been added to the cart
-    // if(isset($_POST['itemName'])) {
-    //     $_SESSION['cart'] = $_POST['itemName'];
-    // }
-    
-
+  
     
      // Checks to see if the form is submitted
     if(isset($_GET['query'])) {

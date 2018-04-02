@@ -47,20 +47,44 @@
             }
                   
                   
-             if (!empty($_GET['category'])) { //checks whether user has typed something in the "Product" text box
+            if (!empty($_GET['category'])) { //checks whether user has typed something in the "Product" text box
                  $sql .=  " AND catId = :categoryId";
                  $namedParameters[":categoryId"] =  $_GET['category'];
-            }        
+            }   
             
+            if(!empty($_GET['priceFrom'])) {
+                $sql .= " AND price >= :priceFrom";
+                $namedParameters[":priceFrom"] = $_GET['priceFrom'];
+            }
+            
+            if(!empty($_GET['priceTo'])) {
+                $sql .= " AND price <= :priceTo";
+                $namedParameters[":priceTo"] = $_GET['priceTo'];
+            }
+
+            if(isset($_GET['orderBy'])) { // Checks wheter the user has clicked on the order by checkbox
+                
+                if($_GET['orderBy'] == "price") {
+                    
+                    $sql .= " ORDER BY price";
+                    
+                } else {
+                    $sql .= "ORDER BY productName";
+                }
+            }
+            
+        
             //echo $sql; //for debugging purposes
             
              $stmt = $conn->prepare($sql);
              $stmt->execute($namedParameters);
              $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
+    
             foreach ($records as $record) {
             
-                 echo  $record["productName"] . " " . $record["productDescription"] . "<br />";
+                 echo "<a href=\"purchaseHistory.php?productId=".$record["productId"]. "\"> History </a> ";
+                 echo  $record["productName"] . " " . $record["productDescription"] . " $ " .  $record["price"] . "<br /><br />";
             
             }
         }
@@ -75,6 +99,9 @@
     <head>
         <title> OtterMart Product Search </title>
     </head>
+    <style>
+       @import url("css/styles.css");
+    </style>
     <body>
 
         <h1>  OtterMart Product Search </h1>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Admin Login </title>
+        <title> Admin Logn </title>
     </head>
     <body>
         

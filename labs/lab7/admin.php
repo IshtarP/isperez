@@ -1,5 +1,14 @@
 <?php 
-    session_start();
+    session_start;
+    
+    include '../..dbConnection.php';
+    $conn = getDatabaseConnection("ottermart");
+    
+    function displayAllProducts() {
+        $sql= "SELECT * FROM om_product";
+        
+        
+    }
 
 ?>
 

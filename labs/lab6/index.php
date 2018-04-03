@@ -1,6 +1,8 @@
 
 <?php
 
+
+    // Includes the bdConnection file
     include '../../dbConnection.php';
     
     $conn = getDatabaseConnection("ottermart");

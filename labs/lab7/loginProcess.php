@@ -11,10 +11,24 @@
     $username = $_POST['username']; 
     $password = sha1($_POST['password']);
     
+    
+    // Following aql does not prevent SQL injection
     $sql = "SELECT *
             FROM om_admin
             WHERE username = '$username'
             AND password = '$password'";
+            
+            
+    // Following SQL prevents sql prevention by avoiding using single quotes       
+    $sql = "SELECT * 
+            FROM om_admin
+            WHERE username = :username
+            AND password = :password";
+            
+            
+    $np = array();
+    $np[":username"] = $username;
+    $np[":password"] = $password;
     
     $stmt = $conn->prepare($sql);
     $stmt->execute();

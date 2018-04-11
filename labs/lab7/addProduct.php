@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(isset($_SESSION['adminName'])
+{
+    header("Location:index.php");
+}
     include "../../dbConnnection.php";
     $conn = getDatabaseConnection("ottermart");
     
@@ -12,11 +17,32 @@
         $records = $statement->fetchAll(PDO::FETCH_ASSOC);
         
         foreach($records as $record) {
-            echo "<option>". $record['catName'] . "</option>";
+            echo "<option value='" .$record['catId'] ."'>". $record['catName'] . "</option>";
         
         
     }
+}
 
+if(isset($_GET['submitProduct'])) {
+    $productName = $_GET['productName'];
+    $productDescription = $_GET['description'];
+    $productImage = $_GET['productImage'];
+    $productPrice = $_GET['price'];
+    $catId = $_GET['catId'];
+    
+    $sql = "INSERT INTO om_product
+            ( `productName`, `productDescription`, `productImage`, `price`, `catId`) 
+             VALUES ( :productName, :productDescription, :productImage, :price, :catId)";
+    
+    $namedParameters = array();
+    $namedParameters[':productName'] = $productName;
+    $namedParameters[':productDescription'] = $productDescription;
+    $namedParameters[':productImage'] = $productImage;
+    $namedParameters[':price'] = $productPrice;
+    $namedParameters[':catId'] = $catId;
+    $statement = $conn->prepare($sql);
+    $statement->execute($namedParameters);
+}
 ?>
 
 <!DOCTYPE html>
@@ -33,9 +59,9 @@
             Category: <select name="catId">
                 <option value="">Select One</option>
                 <?php getCategories(); ?>
-            </select>
+            </select> <br />
             set Image Url: <input type="text" name="productImage"><br>
-            <input type="submit" name="submitProduct">
+            <input type="submit" name="submitProduct" value="Add Product">
         </form>
 
     </body>

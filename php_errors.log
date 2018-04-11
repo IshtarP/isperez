@@ -179,3 +179,34 @@ Stack trace:
 [16-Mar-2018 06:21:17 UTC] PHP Warning:  Illegal string offset 'sex' in /home/ubuntu/workspace/isperez/challenge4/reports.php on line 71
 [16-Mar-2018 06:21:17 UTC] PHP Stack trace:
 [16-Mar-2018 06:21:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/challenge4/reports.php:0
+[10-Apr-2018 22:14:49 UTC] PHP Fatal error:  Unsupported operand types in /home/ubuntu/workspace/isperez/ChallengeNumber/index.php on line 44
+[10-Apr-2018 22:14:49 UTC] PHP Stack trace:
+[10-Apr-2018 22:14:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/ChallengeNumber/index.php:0
+[10-Apr-2018 22:14:49 UTC] PHP Fatal error:  Unsupported operand types in /home/ubuntu/workspace/isperez/ChallengeNumber/index.php on line 44
+[10-Apr-2018 22:14:49 UTC] PHP Stack trace:
+[10-Apr-2018 22:14:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/ChallengeNumber/index.php:0
+[10-Apr-2018 22:14:49 UTC] PHP Fatal error:  Unsupported operand types in /home/ubuntu/workspace/isperez/ChallengeNumber/index.php on line 44
+[10-Apr-2018 22:14:49 UTC] PHP Stack trace:
+[10-Apr-2018 22:14:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/ChallengeNumber/index.php:0
+[10-Apr-2018 22:14:49 UTC] PHP Fatal error:  Unsupported operand types in /home/ubuntu/workspace/isperez/ChallengeNumber/index.php on line 44
+[10-Apr-2018 22:14:49 UTC] PHP Stack trace:
+[10-Apr-2018 22:14:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/ChallengeNumber/index.php:0
+[10-Apr-2018 22:14:50 UTC] PHP Fatal error:  Unsupported operand types in /home/ubuntu/workspace/isperez/ChallengeNumber/index.php on line 44
+[10-Apr-2018 22:14:50 UTC] PHP Stack trace:
+[10-Apr-2018 22:14:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/ChallengeNumber/index.php:0
+[10-Apr-2018 22:14:50 UTC] PHP Fatal error:  Unsupported operand types in /home/ubuntu/workspace/isperez/ChallengeNumber/index.php on line 44
+[10-Apr-2018 22:14:50 UTC] PHP Stack trace:
+[10-Apr-2018 22:14:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/ChallengeNumber/index.php:0
+[10-Apr-2018 22:14:50 UTC] PHP Fatal error:  Unsupported operand types in /home/ubuntu/workspace/isperez/ChallengeNumber/index.php on line 44
+[10-Apr-2018 22:14:50 UTC] PHP Stack trace:
+[10-Apr-2018 22:14:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/ChallengeNumber/index.php:0
+[10-Apr-2018 22:14:57 UTC] PHP Fatal error:  Unsupported operand types in /home/ubuntu/workspace/isperez/ChallengeNumber/index.php on line 44
+[10-Apr-2018 22:14:57 UTC] PHP Stack trace:
+[10-Apr-2018 22:14:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/ChallengeNumber/index.php:0
+[10-Apr-2018 22:29:41 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /home/ubuntu/workspace/isperez/ChallengeNumber/index.php on line 43
+[10-Apr-2018 22:29:41 UTC] PHP Stack trace:
+[10-Apr-2018 22:29:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/ChallengeNumber/index.php:0
+[10-Apr-2018 22:29:41 UTC] PHP   2. array_push() /home/ubuntu/workspace/isperez/ChallengeNumber/index.php:43
+[10-Apr-2018 22:49:41 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home/ubuntu/workspace/isperez/ChallengeNumber/index.php on line 42
+[10-Apr-2018 22:49:42 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home/ubuntu/workspace/isperez/ChallengeNumber/index.php on line 42
+[10-Apr-2018 22:49:50 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home/ubuntu/workspace/isperez/ChallengeNumber/index.php on line 42

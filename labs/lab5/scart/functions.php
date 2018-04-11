@@ -5,8 +5,7 @@
     function displayCart() {
               
                 
-                
-
+            
         if(isset($_SESSION['cart'])) {
             echo "<table class='table'>";
             foreach ($_SESSION['cart'] as $item) {

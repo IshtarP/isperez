@@ -1,10 +1,18 @@
 <?php 
     session_start;
-    
+    if(!isset($_SESSION['adminName']))
+    {
+        header("Location:index.php");
+    }
     include '../..dbConnection.php';
     $conn = getDatabaseConnection("ottermart");
     
     function displayAllProducts() {
+        global $conn;
+        $sql="SELECT *FROM om_product";
+        $statement = $conn->prepare($sql);
+        $statement->execute();
+        $records = $statement->fetchAll(PDO::FETCH_ASSOC);
         $sql= "SELECT * FROM om_product";
         
         

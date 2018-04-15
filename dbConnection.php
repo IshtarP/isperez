@@ -2,7 +2,7 @@
 
 function getDatabaseConnection($dbName) {
 
-$host = "localhost'"; /*mysql://bd39215d80e30b:c08f6a4f@us-cdbr-iron-east-05.cleardb.net/heroku_12e5c2b6117ae8a?reconnect=true*/
+$host = "localhost"; /*mysql://bd39215d80e30b:c08f6a4f@us-cdbr-iron-east-05.cleardb.net/heroku_12e5c2b6117ae8a?reconnect=true*/
 $dbname = $dbName;
 $username = "root";
 $password = "";

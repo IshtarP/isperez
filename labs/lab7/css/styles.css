@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+
+
+#box {
+    background: url(../img/colorful.png) no-repeat center fixed;
+    background-size: cover;
+}
+
+.big {
+    font-size: 25px;
+}
+

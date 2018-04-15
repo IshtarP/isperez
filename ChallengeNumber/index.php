@@ -2,57 +2,63 @@
     
     session_start();
     
-    $number= rand(1,10); /* Random numbers from 1-10*/
+    if(!isset($_GET['enter']) || isset($_GET['playAgain'])) {
+        
+        $_SESSION["number"] =  rand(1,100); /* Random numbers from 1-10*/
+        $_SESSION["attempts"] = 0;
+    }
     
+    $_SESSION['numbers'] = array();
+    $_SESSION['tries'] = array();
    
 
-    $_SESSION["number"];
-    
     echo $_SESSION["number"];
     
-    if(isset($_GET['submit'])) {
+    function checkGuess($guess, $number){
         
-        $guess = $_GET['guess'];
-        
-        if($guess == $number) {
-            
-            echo "<You've guessed the number!</div>";
-        }
-        
-        elseif($guess < $number) {
-            
-            echo "<div class='wrong'>Your guess needs to be higher.</div>";
-            
+        if($guess > $number) {
+              echo "Your guess needs to be lower.";
             
         }
         
-        else {
+        elseif($guess <  $number) {
             
-            echo "<div class='wrong'>Your guess needs to be lower.</div>";
+            echo "Your guess needs to be higher";
             
+            
+        }
+        
+        elseif($guess == $number) {
+            echo "You've guessed the number!";
+        
+            
+        }
+        
+    }
+    
+    
+    function displayHistory() {
+        
+        for($i = 0; $i < count($_SESSION['history']); $i++) {
+            
+            echo "You guessed the number " . $_SESSION['history'][$i];
         }
     }
     
-    echo "Number of tries: " . $_SESSION["attempts"];
-    echo "<br>";
+   
     
-    if ($_SESSION["attempts"] == null) 
-    {
-    $_SESSION["attempts"] ++;
-    }
-    else{
-    $_SESSION["attempts"]++; 
+    if(isset($_GET['enter'])) {
+        
+        $_SESSION["attempts"]++;
     }
     
     if(isset($_GET['giveUp'])) {
         
-        echo "The number was " . $number;
+        echo "The number was " . $_SESSION["number"];
     }
     
-    if(isset($_GET['playAgain'])) {
-        
-        session_unset();
-    }
+    
+    
 ?>
 
 <!DOCTYPE html>
@@ -75,12 +81,21 @@
             Guess: <input type="text" name="guess"/>
             </br></br>
             
-            <input type="submit" name="submit" value="Guess Number"/>
+            <input type="submit" name="enter" value="Guess Number"/>
             </br></br>
             
             <input type="submit" name="giveUp" value="Give Up"/>
             <input type="submit" name="playAgain" value="Play Again"/>
-            
+            <br/>
+            <?php
+                
+                if(isset($_GET["enter"])) {
+                    
+                     echo "Number of tries: " . $_SESSION["attempts"];
+                     echo "<br>";
+                     checkGuess($_GET["guess"], $_SESSION["number"]);
+                }
+            ?>
         </form>
     </body>
 </html>

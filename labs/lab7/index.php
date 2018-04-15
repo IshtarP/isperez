@@ -1,18 +1,24 @@
+
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Admin Logn </title>
+        <title> Admin Login </title>
+        <style>
+            @import url(css/styles.css);
+        </style>
     </head>
-    <body>
+    <body id="box">
+
+        <h1> OtterMart - Admin Login </h1>
         
-        <h1> OtterMart - Admin Login</h1>
-        
-        <form method ="POST" action="loginProcess.php">
+        <form method="POST" action="loginProcess.php">
             
-            Username: <input type="text" name="username"/> <br/>
-            Password: <input type="password" name"password"/> <br>
+            <strong class="big">Username</strong>: <input type="text" name="username"/> <br />
+            <strong class="big">Password</strong>: <input type="password" name="password"/> <br />
             
-            <input type="submit" name="submitfrom" value="login!"/>
+            <input type="submit" name="submitForm" value="Login!" />
+            
         </form>
 
     </body>

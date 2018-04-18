@@ -30,9 +30,12 @@
                         <!-- Might use the database to display all the MAKES available-->
                         <!-- or might use a function-->
                         <ul class="dropdown-menu">
-                            <li><a href="#">SELECT MAKE</a></li>
-                            <li><a href="#">SELECT MODEL</a></li>
-                            <li><a href="#">SELECT NEW/USED</a></li>
+                            <li><a href="#">HONDA</a></li>
+                            <li><a href="#">NISSAN</a></li>
+                            <li><a href="#">FORD</a></li>
+                            <li><a href="#">SUBARU</a></li>
+                            <li><a href="#">BMW</a></li>
+                            <li><a href="#">AUDI</a></li>
                         </ul>
                     </li>
                 </ul>

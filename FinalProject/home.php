@@ -20,26 +20,66 @@
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#"><strong>The Car Shop</strong></a>
+                    <a class="navbar-brand" href="#"><strong id="test">The Car Shop</strong></a>
                 </div>
                 <ul class="nav navbar-nav">
                     <!--<li class="active"><a href="#">Filter b..</a></li>-->
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Filter by..
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">SELECT MAKE
                         <span class="caret"></span></a>
+                        <!-- Might use the database to display all the MAKES available-->
+                        <!-- or might use a function-->
                         <ul class="dropdown-menu">
                             <li><a href="#">SELECT MAKE</a></li>
                             <li><a href="#">SELECT MODEL</a></li>
                             <li><a href="#">SELECT NEW/USED</a></li>
                         </ul>
                     </li>
+                </ul>
+                
+                <ul class="nav navbar-nav">
+                    <!--<li class="active"><a href="#">Filter b..</a></li>-->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">SELECT MODEL
+                        <span class="caret"></span></a>
+                        <!-- Might use the database to display all the MAKES available-->
+                        <!-- or might use a function-->
+                        <ul class="dropdown-menu">
+                            <li><a href="#">SELECT MAKE</a></li>
+                            <li><a href="#">SELECT MODEL</a></li>
+                            <li><a href="#">SELECT NEW/USED</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <ul class="nav navbar-nav">
+                    <!--<li class="active"><a href="#">Filter b..</a></li>-->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">SELECT NEW/USED
+                        <span class="caret"></span></a>
+                        <!-- Might use the database to display all the MAKES available-->
+                        <!-- or might use a function-->
+                        <ul class="dropdown-menu">
+                            <li><a href="#">SELECT MAKE</a></li>
+                            <li><a href="#">SELECT MODEL</a></li>
+                            <li><a href="#">SELECT NEW/USED</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                
+                
             
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="buttonColor"href="#"><span class="glyphicon glyphicon-log-in</a>"></span>Login</a></li>
+                    
                 </ul>
                 <form class="navbar-form navbar-left" action="/action.php">
                     <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search">
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="submit" class="btn btn-default">Search</button>
                 </form>
             </div>
         </nav>
@@ -61,6 +101,10 @@
                 
                 <div class="item">
                     <img src="img/bmwM3.png" alt="bmwM3">
+                </div>
+                
+                <div class="item">
+                    <img src="img/honda.png" alt="honda">
                 </div>
             </div>
             

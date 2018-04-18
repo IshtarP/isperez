@@ -36,15 +36,7 @@
                 </div>
             </nav>
             <br /> <br /> <br />
-           <!-- <form>
-                Search: <input type="text" name="cars" placeholder="Search for a car"/>
-                <select id="dropdown" name="filter">
-                    <option value="">Filter by...</option>
-                    <option value="make">SELECT MAKE</option>
-                    <option value="model">SELECT MODEL</option>
-                    <option value="new">SELECT NEW/ USED</option>
-                </select>
-            </form>-->
+           
             </div>
         </div>
 

@@ -5,6 +5,14 @@ h1 {
     background-color: gray;
     font-size: 45px;
 }
-.from-group {
-    background-color: red;
+
+/* This changes the header color */
+#test {
+    color: red;
+}
+
+/* Changes the login button color */
+#buttonColor {
+    background-color: black; /* Changed the background color to black */
+    color: white; /* Changed the word color to white */
 }

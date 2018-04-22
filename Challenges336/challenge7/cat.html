@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Challenge 7 </title>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        
+           <div id="cat">
+            <img src="img/now_you_see_me.png">
+            <h2 id='message'>Now you see me</h2>
+        </div>
+        
+        <button id="submit">Do magic!!</button>
+    
+    </body>
+        
+        <script>
+        
+           
+                $("#submit").click( function() {
+                    
+                      var current = $("#cat").find('img').attr('src')
+                      var currentBtn = $("#submit").find("button")
+                      
+                      if(current == 'img/now_you_see_me.png') {
+                          $("#cat").find('img').attr('src','img/now_you_dont.png')
+                          $("#cat").find('#message').text('Now you dont')
+                          $("#submit").text("Undo Magic!!")
+                      } else {
+                           $("#cat").find('img').attr('src','img/now_you_see_me.png')
+                           $("#cat").find('#message').text('Now you see mee..')
+                           $("#submit").text("Do Magic!!")
+                           
+                      }
+                      
+                })
+            
+        
+        </script>
+</html>

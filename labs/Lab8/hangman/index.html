@@ -17,92 +17,47 @@
         <div class='container text-center'>
             <header>
                <h1>Hangman</h1>
+               <h4>Javascript Edition</h4>
             </header>
-            
-            <div id="word"></h2>
+    
+    
+           
+    
+    
+            <div id="word"></div>
             <div id="letters">
-                <input type="text" id="letterBox" size="3">
-                <button id="letterBtn">Submit</button>
-            </div>    
+                
+            <div id="theHints"> 
+              
+            </div>
+            <br>
+                
+            </div> 
+            
+        
+            <div id="won">
+                <h2>You won!</h2>
+                <button class="replayBtn btn-success">Play Again</button>
+            </div>
+            <div id="lost">
+                <h2>You Lost!</h2>
+                <button class="replayBtn btn btn-warning">Play Again</button>
+            </div>
+            
+            <br>
             
             <div id="man">
                <img src="img/stick_0.png" id="hangImg">
             </div>
-        </div>    
+        </div>
         
-     <script>
-               // VARIABLES
-               var selectedWord = "";
-               var selectedHint = "";
-               var board = []; // Initialize an array, empty array
-               var remainingGuesses = 6;
-                
-               var words = ["snake", "monkey", "beetle", "horse", "dog"];
-               
-               var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 
-                'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 
-                'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-
-                
-               
-               // EVENTS
-               window.onload = startGame();
-               
-               $("#letterBtn").click( function(){
-                   
-                   alert($ ("#letterBox").val() );
-                   
-                   
-               });
-               // JQuey version of document.getElementByID
-               
-               
-               function startGame() {
-                   pickWord();
-                   initBoard();
-                   updateBoard();
-               }
-               
-               // Make the code cleaner by using functions
-               
-               // Creates the letters inside the letters div
-               function createLetters() {
-                   for (var letter in alphabet) {
-                       $("#letters").append("<button class='letter' id='" + letter + "</button>");
-                   }
-               }
-               
-               function pickWord() {
-                    var randomInt = Math.floor(Math.random() * words.length);
-                     selectedWord = words[randomInt];
-                     console.log(selectedWord);
-               }
-               
-              
-               function pickWord() {
-                   var randomInt = Math.floor(Math.random() * words.length);
-                   selectedWord = words[randomInt];
-                   console.log(selectedWord);
-               }
-               
-    
-               
-              function initBoard() {
-                  for (var letter in selectedWord) {
-                      board.push("_");
-                  }
-                  
-                  console.log(board);
-              }
-              
-              function updateBoard() {
-                  for (var letter of board) {
-                      document.getElementById("word").innerHTML += letter + " ";
-                  }
-              }
-               
-             
-                
-            </script>
+       
+        
+       
+        
+        
+        <script src="js/hangman.js"></script>
+        
+     
     </body>
 </html>

@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
+
+
 #fixed {
     padding-top: 80px;
+    color:white;
 }
 
 #button {
@@ -12,7 +16,7 @@
     outline:none; /*hides button outline when clicking on it*/
     font-weight:bold;
     color:silver;
-    background-color: black;
+    background-color: firebrick;
     cursor: pointer;
 }
 
@@ -20,3 +24,23 @@ img {
     width: 250px;
     height: 250px;
 }
+
+body {
+    background-image: url("../img/cool2.png");
+}
+
+
+h1 {
+    font-family: fantasy;
+    font-size: 43px;
+    color:white;
+    background-color: darkcyan;
+    padding-top: 20px;
+    padding-bottom: 10px;
+ 
+}    
+
+#outcome {
+    color:white;
+}
+

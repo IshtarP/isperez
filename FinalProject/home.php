@@ -27,6 +27,7 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">SELECT MAKE
                         <span class="caret"></span></a>
+                        <!-- Example of how the dropdown menu will look -->
                         <!-- Might use the database to display all the MAKES available-->
                         <!-- or might use a function-->
                         <ul class="dropdown-menu">

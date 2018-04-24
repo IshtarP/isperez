@@ -1,0 +1,22 @@
+#fixed {
+    padding-top: 80px;
+}
+
+#button {
+    top:75px;
+    left:950px;
+    position:right;
+    font-size:1.3em;
+    background-color: transparent;
+    border:none;
+    outline:none; /*hides button outline when clicking on it*/
+    font-weight:bold;
+    color:silver;
+    background-color: black;
+    cursor: pointer;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+}

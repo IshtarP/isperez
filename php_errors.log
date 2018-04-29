@@ -1029,3 +1029,9 @@ Stack trace:
 [12-Apr-2018 02:24:23 UTC] PHP 254. include() /home/ubuntu/workspace/isperez/FinalProject/home.php:3
 [12-Apr-2018 02:24:23 UTC] PHP 255. include() /home/ubuntu/workspace/isperez/FinalProject/index.php:2
 [12-Apr-2018 02:24:23 UTC] PHP 256. include() /home/ubuntu/workspace/isperez/FinalProject/home.php:3
+[26-Apr-2018 23:37:55 UTC] PHP Fatal error:  Call to undefined function displayCartCount() in /home/ubuntu/workspace/isperez/FinalProject/index.php on line 34
+[26-Apr-2018 23:37:55 UTC] PHP Stack trace:
+[26-Apr-2018 23:37:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/index.php:0
+[26-Apr-2018 23:38:00 UTC] PHP Fatal error:  Call to undefined function displayCartCount() in /home/ubuntu/workspace/isperez/FinalProject/index.php on line 34
+[26-Apr-2018 23:38:00 UTC] PHP Stack trace:
+[26-Apr-2018 23:38:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/index.php:0

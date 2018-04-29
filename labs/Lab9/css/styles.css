@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    background-image: url(../img/form.png); 
+   
+}
+
+
+/* h1 was not working on its own, used an id to be able to change the color */
+#color {
+    color: black;
+}
+
+#fixed {
+     width: 900px;
+	margin: 50px auto;
+	border-radius: 30px;
+	background-color: white;
+	padding: 0px;
+	border-style: solid;
+	border-width: 10px;
+}
+
+#notTaken
+{
+	color: green;
+}
+
+#itsTaken {
+	color: red;
+}

@@ -14,13 +14,13 @@
             @import url(css/styles.css);
         </style>
         
-        <title>Home</title>
+        <title>Final Project</title>
     </head>
     <body>
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default ">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#"><strong id="test">The Sport Car Shop</strong></a>
+                    <a class="navbar-brand" href="#"><strong id="test">The Fast Shop</strong></a>
                 </div>
                 <ul class="nav navbar-nav">
                     <!--<li class="active"><a href="#">Filter b..</a></li>-->
@@ -81,12 +81,16 @@
                 </ul>
                 <form class="navbar-form navbar-left" action="/action.php">
                     <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" class="form-control" placeholder="Search By Model">
                     </div>
-                    <button type="submit" class="btn btn-default">Search</button>
+                    <button type="submit" class="glyphicon glyphicon-search"></button>
+                    
                 </form>
             </div>
         </nav>
+        
+        
+        
         
         <!-- Creating a carousel -->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -122,6 +126,14 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        
+        <div class="message">
+              <img src="../img/Audi/png">
+                    
+        </div>
+        
+        
+
     
     </body>
 </html>

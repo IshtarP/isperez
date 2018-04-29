@@ -38,11 +38,7 @@ $(".theHint").click( function () {
     
       checkLetter($(this).attr("id"));
       $('#aHint').show()
-  
-    
-  
-    
-    
+
   
     //hints($(this).attr("id"));
 

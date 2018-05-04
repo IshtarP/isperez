@@ -1,5 +1,5 @@
 <?php
-  
+
 include('./dbconnection.php');
 
 $dbConn = getDatabaseConnection("final_project");
@@ -17,20 +17,30 @@ function displayCars($sql) {
 
     global $dbConn;
 
-    
-    $stmt =  $dbConn->query($sql);
-    
 
-    
+    $stmt =  $dbConn->query($sql);
+
+
+
+    $columns = array("Picture","Make","Model","Year","Price","Exterior Color","Condition");
+
     $ranOnce = false;
+    $htmlToReturn = "";
+
     while(  $row = $stmt->fetch()) {
-        
         if(!$ranOnce) {
-            echo "<table id='customers'>";
-            echo "<th>Picture</th><th>Make</th><th>Model</th><th>Year</th><th>Price</th><th>Exterior Color</th><th>Used/New</th>";
+            $htmlToReturn .= "<table class='table table-striped'>";
+
+            $columnHTML = "<thead class='thead-light'><tr>";
+            foreach ($columns as  $column) {
+              $columnHTML .= "<th scope='col'>" . $column ." </th>";
+            }
+            $columnHTML .= "</tr></thead>";
+            $htmlToReturn .= $columnHTML;
+            $htmlToReturn .= "<tbody>";
             $ranOnce = true;
         }
-  
+
         $make = $row['make_name'];
         $model = $row['model_name'];
         $year = $row['year'];
@@ -38,19 +48,21 @@ function displayCars($sql) {
         $picture = $row['picture'];
         $exterior_color = $row['exterior_color'];
         $used_or_new = $row['used_or_new'];
-        echo "<tr>";
-        printf("<td><img src='%s'/><td>%s</td><td>%s</td><td>%s</td><td>$%s</td></td><td>%s</td><td>%s</td>",$picture,$make,$model,$year,$price,$exterior_color,$used_or_new);
-        
+        $htmlToReturn .= "<tr>";
+         $htmlToReturn .=  sprintf("<td><img class='cars' src='%s'/><td>%s</td><td>%s</td><td>%s</td><td>$%s</td></td><td>%s</td><td>%s</td>",$picture,$make,$model,$year,$price,$exterior_color,$used_or_new);
+
         // echo $row['make_name'] . $row['model_name'] . $row['year'] . $row['price'] ."<br>";
-        
-        echo "</tr>";
+
+        $htmlToReturn .= "</tr>";
     }
     if($ranOnce) {
-      echo "<table>";
+      $htmlToReturn .= "</tbody></table>";
 
     } else {
-        echo "<h1 id='noresulst'>No results</h1>";
+        $htmlToReturn .= "<h1 id='noresulst'>No results</h1>";
     }
+
+    echo $htmlToReturn;
 
 // | make_name | model_name        | year | exterior_color | used_or_new | price |
 }
@@ -60,28 +72,85 @@ function yeet() {
 }
 
 function displaySelectMake() {
-    
+
     global $dbConn;
     $sql =  "SELECT * FROM car_make  order by make_id;";
- 
+
     $stmt =  $dbConn->query($sql);
-    $html = " <select id='make' name='make'><option disabled selected value> -- select an option -- </option>";
+    $html = " <select class='selectpicker' id='make' name='make'><option disabled selected value> -- select an option -- </option>";
     while( $row = $stmt->fetch() ) {
-    
-        
+
+
         $make_id = $row['make_id'];
         $make_name = $row['make_name'];
         $html .= "<option value='$make_id'>$make_name</option>";
-  
 
- 
+
+
     }
-    
+
     $html .= "</select>";
-    
+
     echo $html;
 }
-    
+
+
+
+function adminDisplay() {
+
+    global $dbConn;
+
+    $sql =  "SELECT * FROM car_lot AS lot" .
+             " INNER JOIN car_model AS model ON lot.model_id = model.model_id" .
+             " INNER JOIN car_make AS make ON make.make_id = model.make_id order by car_id;";
+
+    $stmt =  $dbConn->query($sql);
+
+
+
+    $columns = array("Picture","Make","Model","Year","Price","Exterior Color","Condition","Delete");
+
+    $ranOnce = false;
+    while(  $row = $stmt->fetch()) {
+
+        if(!$ranOnce) {
+            echo "<table class='table table-striped'>";
+
+            $columnHTML = "<thead class='thead-light'><tr>";
+            foreach ($columns as  $column) {
+              $columnHTML .= "<th scope='col'>" . $column ." </th>";
+            }
+            $columnHTML .= "</tr></thead>";
+            echo $columnHTML;
+            echo "<tbody>";
+            $ranOnce = true;
+        }
+
+        $make = $row['make_name'];
+        $model = $row['model_name'];
+        $year = $row['year'];
+        $price = number_format($row['price']);
+        $picture = $row['picture'];
+        $exterior_color = $row['exterior_color'];
+        $used_or_new = $row['used_or_new'];
+        echo "<tr>";
+
+        $del = "<input onClick='deleteCar(this.name)' type='button' name='" . $row['car_id']. "' value=Delete />";
+        printf("<td><img class='cars' src='%s'/><td>%s</td><td>%s</td><td>%s</td><td>$%s</td></td><td>%s</td><td>%s</td><td>%s</td>",$picture,$make,$model,$year,$price,$exterior_color,$used_or_new,$del);
+
+        // echo $row['make_name'] . $row['model_name'] . $row['year'] . $row['price'] ."<br>";
+
+        echo "</tr>";
+    }
+    if($ranOnce) {
+      echo "</tbody></table>";
+
+    } else {
+        echo "<h1 id='noresulst'>No results</h1>";
+    }
+
+// | make_name | model_name        | year | exterior_color | used_or_new | price |
+}
 
 
 ?>

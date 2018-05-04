@@ -6,6 +6,13 @@ h1 {
     font-size: 55px;
 }
 
+img {
+    
+    width: 150px;
+
+    height: 150px;
+}
+
 /* This changes the header color */
 #test {
     color: black;
@@ -17,20 +24,91 @@ h1 {
     color: white; /* Changed the word color to white */
 }
 
-button {
-    width: 35px;
-    height: 35px;
+
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
 }
 
-/*.jumbotron {
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+img {
     
-   padding-left: 400px;
-   padding-right: 400px;
-   padding-bottom: 25px;
-   padding-top: 0px;
-   height:40px;
-   color:maroon;
-  
-}*/
+    width:100%;
+    height:100%;
+}
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/*Style for the title*/
+h1 {
+    color:maroon;
+    text-align: center;
+    background-color: gray;
+    font-size: 55px;
+}
+
+/* This changes the header color */
+#test {
+    color: black;
+}
+
+/* Changes the login button color */
+#buttonColor {
+    background-color: black; /* Changed the background color to black */
+    color: white; /* Changed the word color to white */
+}
 
 
+/*Style for the title*/
+h1 {
+    color:maroon;
+    text-align: center;
+    background-color: gray;
+    font-size: 55px;
+}
+
+
+img {
+
+    width: 100%;
+
+    height: 100%;
+}
+
+img.cars {
+    width: 150px;
+    height: 150px;
+}
+
+#fixed {
+    padding-top: 30px;
+}
+
+#colorTest {
+    background-color: maroon;
+}
+
+ /*#testing {
+    width: 500px;
+    height: 500px;
+    text-align: left;
+	border-radius: 30px;
+	background-color: rgba(255,255,255,0.1);
+	color:white;
+	border-style: solid;
+	border-width: 0px;
+} */

@@ -1,3 +1,17 @@
+<?php
+
+include 'functions.php';
+
+session_start();
+
+if(!isset($SESSION['cart'])) {
+    
+    $_SESSION['cart'] = array();
+}
+
+
+
+?>
 
 
 <!DOCTYPE html>
@@ -17,80 +31,16 @@
         <title>Final Project</title>
     </head>
     <body>
-        <nav class="navbar navbar-default ">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#"><strong id="test">The Fast Shop</strong></a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <!--<li class="active"><a href="#">Filter b..</a></li>-->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">SELECT MAKE
-                        <span class="caret"></span></a>
-                        <!-- Example of how the dropdown menu will look -->
-                        <!-- Might use the database to display all the MAKES available-->
-                        <!-- or might use a function-->
-                        <ul class="dropdown-menu">
-                            <li><a href="#">HONDA</a></li>
-                            <li><a href="#">NISSAN</a></li>
-                            <li><a href="#">FORD</a></li>
-                            <li><a href="#">SUBARU</a></li>
-                            <li><a href="#">BMW</a></li>
-                            <li><a href="#">AUDI</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                
-                <ul class="nav navbar-nav">
-                    <!--<li class="active"><a href="#">Filter b..</a></li>-->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">SELECT MODEL
-                        <span class="caret"></span></a>
-                        <!-- Might use the database to display all the MAKES available-->
-                        <!-- or might use a function-->
-                        <ul class="dropdown-menu">
-                            <li><a href="#">SELECT MAKE</a></li>
-                            <li><a href="#">SELECT MODEL</a></li>
-                            <li><a href="#">SELECT NEW/USED</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                
-                <ul class="nav navbar-nav">
-                    <!--<li class="active"><a href="#">Filter b..</a></li>-->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">SELECT NEW/USED
-                        <span class="caret"></span></a>
-                        <!-- Might use the database to display all the MAKES available-->
-                        <!-- or might use a function-->
-                        <ul class="dropdown-menu">
-                            <li><a href="#">SELECT MAKE</a></li>
-                            <li><a href="#">SELECT MODEL</a></li>
-                            <li><a href="#">SELECT NEW/USED</a></li>
-                        </ul>
-                    </li>
-                </ul>
                 
                 
-                
-            
-                
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a id="buttonColor"href="#"><span class="glyphicon glyphicon-log-in</a>"></span>Login</a></li>
-                    
-                </ul>
-                <form class="navbar-form navbar-left" action="/action.php">
-                    <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search By Model">
-                    </div>
-                    <button type="submit" class="glyphicon glyphicon-search"></button>
-                    
-                </form>
-            </div>
-        </nav>
+            <button onClick="window.location.pathname = 'isperez/FinalProject/login.php'" id="colorTest" type="button" class="btn btn-default">admin Login</button>
+                <a href="action.php">Browse Cars</a>
+
         
         
+        <!-- Testing the div -->
         
+          
         
         <!-- Creating a carousel -->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -102,7 +52,7 @@
             </ol>
             
             <!-- Wrapper for slides -->
-            <div class="carousel-inner">
+            <div id="fixed" class="carousel-inner">
                 <div class="item active">
                     <img src="img/theNissanGTR.png" alt="nissanGTR">
                 </div>
@@ -127,10 +77,12 @@
             </a>
         </div>
         
-        <div class="message">
-              <img src="../img/Audi/png">
+        </div> <!-- closing the div for the testing -->
+        
+        <!-- <div class="message">
+              <img src="./img/Audi.png">
                     
-        </div>
+        </div> -->
         
         
 

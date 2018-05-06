@@ -1,0 +1,81 @@
+[02-May-2018 22:20:34 UTC] PHP Warning:  include(../../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:20:34 UTC] PHP Stack trace:
+[02-May-2018 22:20:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:20:34 UTC] PHP Warning:  include(): Failed opening '../../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:20:34 UTC] PHP Stack trace:
+[02-May-2018 22:20:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:20:34 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 5
+[02-May-2018 22:20:34 UTC] PHP Stack trace:
+[02-May-2018 22:20:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:20:38 UTC] PHP Warning:  include(../../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:20:38 UTC] PHP Stack trace:
+[02-May-2018 22:20:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:20:38 UTC] PHP Warning:  include(): Failed opening '../../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:20:38 UTC] PHP Stack trace:
+[02-May-2018 22:20:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:20:38 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 5
+[02-May-2018 22:20:38 UTC] PHP Stack trace:
+[02-May-2018 22:20:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:21:19 UTC] PHP Warning:  include(../../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:21:19 UTC] PHP Stack trace:
+[02-May-2018 22:21:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:21:19 UTC] PHP Warning:  include(): Failed opening '../../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:21:19 UTC] PHP Stack trace:
+[02-May-2018 22:21:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:21:19 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 5
+[02-May-2018 22:21:19 UTC] PHP Stack trace:
+[02-May-2018 22:21:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:22:34 UTC] PHP Warning:  include(../../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:22:34 UTC] PHP Stack trace:
+[02-May-2018 22:22:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:22:34 UTC] PHP Warning:  include(): Failed opening '../../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:22:34 UTC] PHP Stack trace:
+[02-May-2018 22:22:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:22:34 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 5
+[02-May-2018 22:22:34 UTC] PHP Stack trace:
+[02-May-2018 22:22:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:23:24 UTC] PHP Warning:  include(../../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:23:24 UTC] PHP Stack trace:
+[02-May-2018 22:23:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:23:24 UTC] PHP Warning:  include(): Failed opening '../../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:23:24 UTC] PHP Stack trace:
+[02-May-2018 22:23:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:23:24 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 5
+[02-May-2018 22:23:24 UTC] PHP Stack trace:
+[02-May-2018 22:23:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:23:26 UTC] PHP Warning:  include(../../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:23:26 UTC] PHP Stack trace:
+[02-May-2018 22:23:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:23:26 UTC] PHP Warning:  include(): Failed opening '../../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:23:26 UTC] PHP Stack trace:
+[02-May-2018 22:23:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:23:26 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 5
+[02-May-2018 22:23:26 UTC] PHP Stack trace:
+[02-May-2018 22:23:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:24:10 UTC] PHP Warning:  include(../../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:24:10 UTC] PHP Stack trace:
+[02-May-2018 22:24:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:24:10 UTC] PHP Warning:  include(): Failed opening '../../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:24:10 UTC] PHP Stack trace:
+[02-May-2018 22:24:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:24:10 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 5
+[02-May-2018 22:24:10 UTC] PHP Stack trace:
+[02-May-2018 22:24:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:29:50 UTC] PHP Warning:  include(../../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:29:50 UTC] PHP Stack trace:
+[02-May-2018 22:29:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:29:50 UTC] PHP Warning:  include(): Failed opening '../../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:29:50 UTC] PHP Stack trace:
+[02-May-2018 22:29:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:29:50 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 5
+[02-May-2018 22:29:50 UTC] PHP Stack trace:
+[02-May-2018 22:29:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:29:52 UTC] PHP Warning:  include(../../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:29:52 UTC] PHP Stack trace:
+[02-May-2018 22:29:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:29:52 UTC] PHP Warning:  include(): Failed opening '../../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 3
+[02-May-2018 22:29:52 UTC] PHP Stack trace:
+[02-May-2018 22:29:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0
+[02-May-2018 22:29:52 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php on line 5
+[02-May-2018 22:29:52 UTC] PHP Stack trace:
+[02-May-2018 22:29:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/Challenges336/LastChallenge/data.php:0

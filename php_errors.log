@@ -1035,3 +1035,312 @@ Stack trace:
 [26-Apr-2018 23:38:00 UTC] PHP Fatal error:  Call to undefined function displayCartCount() in /home/ubuntu/workspace/isperez/FinalProject/index.php on line 34
 [26-Apr-2018 23:38:00 UTC] PHP Stack trace:
 [26-Apr-2018 23:38:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/index.php:0
+[03-May-2018 06:37:53 UTC] PHP Fatal error:  Call to undefined function displayMake() in /home/ubuntu/workspace/isperez/FinalProject/home.php on line 46
+[03-May-2018 06:37:53 UTC] PHP Stack trace:
+[03-May-2018 06:37:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/home.php:0
+[03-May-2018 06:38:31 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/ubuntu/workspace/isperez/FinalProject/functions.php on line 6
+[03-May-2018 06:38:31 UTC] PHP Stack trace:
+[03-May-2018 06:38:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/home.php:0
+[03-May-2018 07:22:41 UTC] PHP Fatal error:  Call to undefined function displayCartCount() in /home/ubuntu/workspace/isperez/FinalProject/index.php on line 34
+[03-May-2018 07:22:41 UTC] PHP Stack trace:
+[03-May-2018 07:22:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/index.php:0
+[03-May-2018 07:34:02 UTC] PHP Parse error:  syntax error, unexpected 'yeet' (T_STRING) in /home/ubuntu/workspace/isperez/FinalProject/action.php on line 3
+[03-May-2018 07:34:12 UTC] PHP Parse error:  syntax error, unexpected 'yeet' (T_STRING) in /home/ubuntu/workspace/isperez/FinalProject/action.php on line 3
+[03-May-2018 07:34:39 UTC] PHP Fatal error:  Call to undefined function yeet() in /home/ubuntu/workspace/isperez/FinalProject/action.php on line 3
+[03-May-2018 07:34:39 UTC] PHP Stack trace:
+[03-May-2018 07:34:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/action.php:0
+[03-May-2018 07:35:55 UTC] PHP Parse error:  syntax error, unexpected '$sql' (T_VARIABLE) in /home/ubuntu/workspace/isperez/FinalProject/action.php on line 8
+[03-May-2018 07:36:03 UTC] PHP Parse error:  syntax error, unexpected '$sql' (T_VARIABLE) in /home/ubuntu/workspace/isperez/FinalProject/action.php on line 8
+[03-May-2018 07:39:13 UTC] PHP Catchable fatal error:  Object of class PDOStatement could not be converted to string in /home/ubuntu/workspace/isperez/FinalProject/action.php on line 11
+[03-May-2018 07:39:13 UTC] PHP Stack trace:
+[03-May-2018 07:39:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/action.php:0
+[03-May-2018 07:40:04 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/isperez/FinalProject/action.php on line 11
+[03-May-2018 07:40:04 UTC] PHP Stack trace:
+[03-May-2018 07:40:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/action.php:0
+[03-May-2018 07:43:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lot.model_id' in 'on clause'' in /home/ubuntu/workspace/isperez/FinalProject/action.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/action.php(12): PDO->query('SELECT make_nam...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/action.php on line 12
+[03-May-2018 07:43:51 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lot.model_id' in 'on clause'' in /home/ubuntu/workspace/isperez/FinalProject/action.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/action.php(13): PDO->query('SELECT make_nam...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/action.php on line 13
+[03-May-2018 08:30:08 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sort by car_id' at line 1' in /home/ubuntu/workspace/isperez/FinalProject/action.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/action.php(19): PDO->query('SELECT * FROM c...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/action.php on line 19
+[03-May-2018 08:30:10 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sort by car_id' at line 1' in /home/ubuntu/workspace/isperez/FinalProject/action.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/action.php(19): PDO->query('SELECT * FROM c...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/action.php on line 19
+[03-May-2018 08:32:43 UTC] PHP Parse error:  syntax error, unexpected 'printf' (T_STRING), expecting ',' or ';' in /home/ubuntu/workspace/isperez/FinalProject/action.php on line 34
+[03-May-2018 09:02:51 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 15
+[03-May-2018 09:02:51 UTC] PHP Stack trace:
+[03-May-2018 09:02:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/action.php:0
+[03-May-2018 09:02:51 UTC] PHP   2. displayCars() /home/ubuntu/workspace/isperez/FinalProject/action.php:20
+[03-May-2018 09:03:05 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 15
+[03-May-2018 09:03:05 UTC] PHP Stack trace:
+[03-May-2018 09:03:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/action.php:0
+[03-May-2018 09:03:05 UTC] PHP   2. displayCars() /home/ubuntu/workspace/isperez/FinalProject/action.php:20
+[03-May-2018 09:03:40 UTC] PHP Parse error:  syntax error, unexpected '=', expecting ',' or ';' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 5
+[03-May-2018 09:03:40 UTC] PHP Stack trace:
+[03-May-2018 09:03:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/action.php:0
+[03-May-2018 09:04:20 UTC] PHP Parse error:  syntax error, unexpected 'global' (T_GLOBAL) in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 15
+[03-May-2018 09:04:20 UTC] PHP Stack trace:
+[03-May-2018 09:04:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/action.php:0
+[03-May-2018 09:09:31 UTC] PHP Fatal error:  Call to undefined function displaySelectMake() in /home/ubuntu/workspace/isperez/FinalProject/action.php on line 36
+[03-May-2018 09:09:31 UTC] PHP Stack trace:
+[03-May-2018 09:09:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/action.php:0
+[03-May-2018 09:29:03 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/isperez/FinalProject/getmodels.php on line 12
+[03-May-2018 09:29:03 UTC] PHP Stack trace:
+[03-May-2018 09:29:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/getmodels.php:0
+[03-May-2018 09:29:20 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/isperez/FinalProject/getmodels.php on line 12
+[03-May-2018 09:29:20 UTC] PHP Stack trace:
+[03-May-2018 09:29:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/getmodels.php:0
+[03-May-2018 09:30:08 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/isperez/FinalProject/getmodels.php on line 12
+[03-May-2018 09:30:08 UTC] PHP Stack trace:
+[03-May-2018 09:30:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/getmodels.php:0
+[03-May-2018 09:31:08 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/isperez/FinalProject/getmodels.php on line 13
+[03-May-2018 09:31:08 UTC] PHP Stack trace:
+[03-May-2018 09:31:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/getmodels.php:0
+[03-May-2018 09:31:38 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause'' in /home/ubuntu/workspace/isperez/FinalProject/getmodels.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/getmodels.php(13): PDO->query('SELECT * FROM c...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/getmodels.php on line 13
+[03-May-2018 09:32:24 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/isperez/FinalProject/getmodels.php on line 14
+[03-May-2018 09:32:24 UTC] PHP Stack trace:
+[03-May-2018 09:32:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/getmodels.php:0
+[03-May-2018 10:07:50 UTC] PHP Fatal error:  Cannot redeclare displayCars() (previously declared in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:7) in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 47
+[03-May-2018 10:07:50 UTC] PHP Stack trace:
+[03-May-2018 10:07:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/action.php:0
+[03-May-2018 10:08:30 UTC] PHP Fatal error:  Cannot redeclare displayCars() (previously declared in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:7) in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 46
+[03-May-2018 10:08:30 UTC] PHP Stack trace:
+[03-May-2018 10:08:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/action.php:0
+[03-May-2018 10:19:51 UTC] PHP Fatal error:  Cannot redeclare getDatabaseConnection() (previously declared in /home/ubuntu/workspace/isperez/FinalProject/dbconnection.php:3) in /home/ubuntu/workspace/isperez/FinalProject/dbconnection.php on line 3
+[03-May-2018 10:19:51 UTC] PHP Stack trace:
+[03-May-2018 10:19:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/getcars.php:0
+[03-May-2018 10:19:51 UTC] PHP   2. include() /home/ubuntu/workspace/isperez/FinalProject/getcars.php:4
+[03-May-2018 10:20:38 UTC] PHP Fatal error:  Cannot redeclare getDatabaseConnection() (previously declared in /home/ubuntu/workspace/isperez/FinalProject/dbconnection.php:3) in /home/ubuntu/workspace/isperez/FinalProject/dbconnection.php on line 3
+[03-May-2018 10:20:38 UTC] PHP Stack trace:
+[03-May-2018 10:20:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/getcars.php:0
+[03-May-2018 10:20:38 UTC] PHP   2. include() /home/ubuntu/workspace/isperez/FinalProject/getcars.php:4
+[03-May-2018 10:21:10 UTC] PHP Fatal error:  Cannot redeclare getDatabaseConnection() (previously declared in /home/ubuntu/workspace/isperez/FinalProject/dbconnection.php:3) in /home/ubuntu/workspace/isperez/FinalProject/dbconnection.php on line 3
+[03-May-2018 10:21:10 UTC] PHP Stack trace:
+[03-May-2018 10:21:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/getcars.php:0
+[03-May-2018 10:21:10 UTC] PHP   2. include() /home/ubuntu/workspace/isperez/FinalProject/getcars.php:4
+[03-May-2018 10:21:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'make_id' in where clause is ambiguous' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(22): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:22:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'make_id' in where clause is ambiguous' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(22): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:22:40 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'make_id' in where clause is ambiguous' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(22): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:23:25 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'model_id' in where clause is ambiguous' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(22): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:24:53 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'make_id' in where clause is ambiguous' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(24): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:28:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'used_or_new='used'' at line 1' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(31): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:29:09 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'used_or_new='used'' at line 1' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(31): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:29:24 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'used_or_new='used'' at line 1' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(31): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:30:07 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/isperez/FinalProject/getcars.php on line 33
+[03-May-2018 10:30:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'used_or_new='used'' at line 1' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(32): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:30:37 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'used_or_new='used'' at line 1' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(32): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:30:55 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'used_or_new=used' at line 1' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(32): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:31:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'used_or_new = 'used'' at line 1' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(32): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:32:15 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'used_or_new='used'' at line 1' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(31): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:32:41 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'used_or_new='used'' at line 1' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(31): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:33:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'used_or_new='used'' at line 1' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(31): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:34:54 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'make_id=4' at line 1' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(36): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:36:18 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'make_id' in where clause is ambiguous' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(37): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:36:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'car.make.make_id' in 'where clause'' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(37): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:36:46 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'car_make.make_id' in 'where clause'' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(37): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:37:01 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'make_id' in where clause is ambiguous' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(37): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:37:29 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'make_id=3' at line 1' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(37): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:39:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'make_id' in where clause is ambiguous' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(43): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:39:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'make_id' in where clause is ambiguous' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(42): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:39:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'make_id' in where clause is ambiguous' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(42): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:44:57 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(42): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:48:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'used_or_new='8'' at line 1' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(47): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:48:18 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'model_id='10'' at line 1' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(47): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:48:42 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'model_id' in where clause is ambiguous' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(47): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:52:09 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'model_id' in where clause is ambiguous' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(52): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:52:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'model_id' in where clause is ambiguous' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(52): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:53:42 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'model_id' in where clause is ambiguous' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(52): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:54:09 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'model_id' in where clause is ambiguous' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(52): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 10:54:21 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'model_id' in where clause is ambiguous' in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php(21): PDO->query('SELECT * FROM c...')
+#1 /home/ubuntu/workspace/isperez/FinalProject/getcars.php(52): displayCars('SELECT * FROM c...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/isperez/FinalProject/helper_functions.php on line 21
+[03-May-2018 16:57:35 UTC] PHP Fatal error:  Call to undefined function displayCartCount() in /home/ubuntu/workspace/isperez/FinalProject/index.php on line 34
+[03-May-2018 16:57:35 UTC] PHP Stack trace:
+[03-May-2018 16:57:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/index.php:0
+[04-May-2018 00:10:54 UTC] PHP Fatal error:  Call to undefined function displayCartCount() in /home/ubuntu/workspace/isperez/FinalProject/index.php on line 34
+[04-May-2018 00:10:54 UTC] PHP Stack trace:
+[04-May-2018 00:10:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/index.php:0
+[04-May-2018 17:00:36 UTC] PHP Fatal error:  Call to undefined function displayCartCount() in /home/ubuntu/workspace/isperez/FinalProject/index.php on line 34
+[04-May-2018 17:00:36 UTC] PHP Stack trace:
+[04-May-2018 17:00:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/index.php:0
+[04-May-2018 18:32:03 UTC] PHP Fatal error:  Call to undefined function displayCartCount() in /home/ubuntu/workspace/isperez/FinalProject/index.php on line 34
+[04-May-2018 18:32:03 UTC] PHP Stack trace:
+[04-May-2018 18:32:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/FinalProject/index.php:0

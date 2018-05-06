@@ -88,7 +88,7 @@
                     $.ajax({
 
                         type: "GET",
-                        url: "http://itcdland.csumb.edu/~milara/ajax/countyList.php",
+                        url: "/isperez/Challenges336/LastChallenge/data.php",
                         dataType: "json",
                         data: { "state": $("#state").val()},
                         success: function(data,status) {
@@ -154,10 +154,57 @@
                 } ); //#zipCode Event 
                 
                 
+                $( "#passwordValidate" ).keyup(function() {
+      
+                  if($("#password").val() === $("#passwordValidate").val())  {
+                       $("#passwordMessage").hide()
+                        $("#passwordValidateMessage").hide()
+                       
+                    } else {
+                         $("#passwordMessage").show()
+                         $("#passwordValidateMessage").show()
+                         return;
+                    }
+                    
+});
+                
+                         
+                 $("#passwordValidate").change( function () {
+                   console.log($("#passwordValidate").val())
+                   console.log($("#password").val())
+                     console.log($("#passwordValidate").val() === $("#password").val())
+                  if($("#password").val() === $("#passwordValidate").val())  {
+                       $("#passwordMessage").hide()
+                        $("#passwordValidateMessage").hide()
+                        //console.log("Hmm")
+                    } else {
+                         $("#passwordMessage").show()
+                         $("#passwordValidateMessage").show()
+                         return;
+                    }
+                    
+                 
+            })
+                
                 
                  $("#password").change( function () {
-                    //alert("hi")
+                     
+                     console.log($("#password").val())   
+                     console.log($("#passwordValidate").val())
+                 
+                     console.log($("#passwordValidate").val() === $("#password").val())//alert("hi")
                     //alert( $("#state").val());
+                    
+                    if($("#password").val() === $("#passwordValidate").val())  {
+                       $("#passwordMessage").hide()
+                        $("#passwordValidateMessage").hide()
+                        
+                        
+                    } else {
+                         $("#passwordMessage").show()
+                         $("#passwordValidateMessage").show()
+                         return;
+                    }
                     
                     $.ajax({
 
@@ -171,7 +218,7 @@
                         
                         
                         
-                        if(data == "") {
+                        if(data == null) {
                             
                             $("#retype").append("<span>Password is empty </span>");
                             
@@ -238,9 +285,10 @@
                 
                 Desired Username: <input id="username" type="text"><span id="taken"></span></br>
                 
-                Password: <input type="password"><br>
                 
-                Type Password Again: <input type="password2"><span id="retype"></span><br>
+                Password: <input id="password" type="password"> <span id="passwordMessage" style="display: none">Passwords don't match</span><br>
+                
+                Type Password Again: <input id="passwordValidate" type="password"><span id="passwordValidateMessage" style="display: none">Passwords dont match</div><br>
                 
                 <input type="submit" value="Sign up!">
             </fieldset>

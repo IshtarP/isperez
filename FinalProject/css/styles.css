@@ -6,31 +6,16 @@ h1 {
     font-size: 55px;
 }
 
-/* This changes the header color */
-#test {
-    color: black;
+
+img {
+
+    width:  100%;
+
+    height: 100%;
 }
 
-/* Changes the login button color */
-#buttonColor {
-    background-color: black; /* Changed the background color to black */
-    color: white; /* Changed the word color to white */
+img.cars {
+
+    width:  150px;
+    height: 150px;
 }
-
-button {
-    width: 35px;
-    height: 35px;
-}
-
-/*.jumbotron {
-    
-   padding-left: 400px;
-   padding-right: 400px;
-   padding-bottom: 25px;
-   padding-top: 0px;
-   height:40px;
-   color:maroon;
-  
-}*/
-
-

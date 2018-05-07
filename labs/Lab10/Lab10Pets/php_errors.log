@@ -1,0 +1,10 @@
+[07-May-2018 20:58:58 UTC] PHP Warning:  include(../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/isperez/labs/Lab10/Lab10Pets/pets/pets.php on line 5
+[07-May-2018 20:58:58 UTC] PHP Stack trace:
+[07-May-2018 20:58:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/labs/Lab10/Lab10Pets/pets/pets.php:0
+[07-May-2018 20:58:58 UTC] PHP Warning:  include(): Failed opening '../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/isperez/labs/Lab10/Lab10Pets/pets/pets.php on line 5
+[07-May-2018 20:58:58 UTC] PHP Stack trace:
+[07-May-2018 20:58:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/labs/Lab10/Lab10Pets/pets/pets.php:0
+[07-May-2018 20:58:58 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/isperez/labs/Lab10/Lab10Pets/pets/pets.php on line 9
+[07-May-2018 20:58:58 UTC] PHP Stack trace:
+[07-May-2018 20:58:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/isperez/labs/Lab10/Lab10Pets/pets/pets.php:0
+[07-May-2018 20:58:58 UTC] PHP   2. getAllPets() /home/ubuntu/workspace/isperez/labs/Lab10/Lab10Pets/pets/pets.php:71

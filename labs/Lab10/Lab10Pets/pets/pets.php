@@ -2,7 +2,7 @@
 
     include 'inc/header.php';
     
-    include '../../../dbConnection.php';
+    include '../../../../dbConnection.php';
     
     function getAllPets(){
         

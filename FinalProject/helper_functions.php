@@ -18,8 +18,8 @@ function displayCarsForAdmin($sql) {
     
     while(  $row = $stmt->fetch()) {
         if(!$ranOnce) {
-            echo "<table class='table table-striped'>";
-            $columnHTML = "<thead class='thead-light'><tr>";
+            echo "<table class='table table-striped'>"; // Adds zebra-stripes to the table
+            $columnHTML = "<thead class='thead-dark'><tr>";
             foreach ($columns as  $column) {
               $columnHTML .= "<th scope='col'>" . $column ." </th>";
             }
@@ -78,7 +78,7 @@ function displayCars($sql) {
         $exterior_color = $row['exterior_color'];
         $used_or_new = $row['used_or_new'];
         $htmlToReturn .= "<tr>";
-         $htmlToReturn .=  sprintf("<td><img class='cars' src='%s'/><td>%s</td><td>%s</td><td>%s</td><td>$%s</td></td><td>%s</td><td>%s</td>",$picture,$make,$model,$year,$price,$exterior_color,$used_or_new);
+         $htmlToReturn .=  sprintf("<td><img class='cars' src='%s'/><td>%s</td><td>%s</td><td>%s</td><td>$%s</td></td><td>%s</td><td>%s</td>",$picture,$make,$model,$year,$price,$exterior_color,$used_or_new); //Replace the percent (%) sign by a variable passed as an argument
         // echo $row['make_name'] . $row['model_name'] . $row['year'] . $row['price'] ."<br>";
         $htmlToReturn .= "</tr>";
     }

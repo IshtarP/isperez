@@ -1,10 +1,10 @@
 /*Style for the title*/
-h1 {
+/*h1 {
     color:maroon;
     text-align: center;
     background-color: gray;
     font-size: 55px;
-}
+}*/
 
 
 img {
@@ -20,7 +20,40 @@ img.cars {
     height: 150px;
 }
 
-#background-color {
+#admin {
+    text-align: center;
     background-color: silver;
 }
 
+
+#heading {
+    color:silver;
+}
+
+#move {
+    position: right;
+}
+
+#theReports {
+    background-color: gray;
+    text-align: center;
+    font-size: 45px;
+}
+
+#box {
+    width: 910px;
+    height: 800px;
+	margin: 0px auto;
+	border-radius: 30px;
+	background-color: white;
+	border-style: solid;
+	border-width: 6px;
+}
+
+#reportBackgroundColor {
+    background-color: silver;
+}
+
+#reportButton {
+    background-color: white;
+}

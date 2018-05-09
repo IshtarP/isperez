@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
 
 
-  <h1>Admin Dashboard</h1>
+  <h1 id="admin">Admin Dashboard</h1>
   <a href="./report.php">Report</a><br>
  Make:
  <?php displaySelectMakeSecond() ?>
@@ -62,7 +62,7 @@ Sort by:
 <div id="cars"></div>
 <div class="container">
   <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add Car</button>
+  <button id="move"type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add Car</button>
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">

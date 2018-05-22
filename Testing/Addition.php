@@ -1,6 +1,3 @@
-<!-- Use javascript instead -->
-
-
 
 <!DOCTYPE html>
 <html>

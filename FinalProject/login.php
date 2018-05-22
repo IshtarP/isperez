@@ -67,5 +67,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
  <button type="submit" class="btn btn-primary">Login</button>
 </form>
 
+<script>
+    
+    
+    
+    
+    
+</script>
+
 </body>
 </html>

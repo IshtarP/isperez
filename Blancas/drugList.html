@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Blancas Drug list </title>
+        
+        <!-- Needed for javascript -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <style>
+            h1{
+                text-align:center;
+            }
+           #box {
+               text-align:center;
+           }
+            
+        
+        </style>
+        
+        <!-- Javascript -->
+        
+        
+    </head>
+    <body>
+        
+        <p id="question1"> Spell the generic name of <span id="name1"></span></p>
+        <input type="text" id="input1" /><button onclick="submit()">Submit</button>
+        <p id="answer1"></p>
+        
+        
+        <!-- <div id="box">
+        <h1> Drug list Questions</h1>
+        
+        <!-- Where the questions will be at 
+        
+        <Strong>1. Spell the generic name of Vicodin </strong>
+        
+        <input id="q1" type="text">
+        
+        <div id="feedback1"></div>
+        
+        <br/>
+        
+        <strong>2. What is the brand name of Ibuprofen:</strong>
+        
+        <!-- Creates the drop down menu 
+        <select id="q2">
+            <option value="" >Select an option</option>
+            <option value="Lasix">Lasix</option>
+            <option value="Diovan">Diovan</option>
+            <option value="Advil">Advil</option>
+        </select>
+        
+        <div id="feedback2"></div>
+        <br/>
+        
+        <strong>3. Zocor is used for </strong>
+        
+        <!-- Drop down menu 
+        <Select id="q3">
+            <option value="" >Select an option</option>
+            <option value="Cholesterol">Cholesterol</option>
+            <option value="Asthma">Asthma</option>
+            <option value="G.E.R.D">G.E.R.D</option>
+        </Select>
+        
+        <div id="feedback3"></div>
+        
+        
+
+        
+    <button> Submit Quiz </button>
+    
+    </div>-->
+    </body>
+    
+    
+    <script>
+        
+        // Will create an array that holds the questions and answers
+        
+        // Variables used 
+        
+        
+        var brandName1 = ["Synthroid","Vicodin","Amoxil","Prinivil","Nexium","Lipitor","Zocor","Plavix","Singulair","Crestor","Lopressor","Lexapro","Zithromax","ProAir HFA","HCTZ","Glucophage",
+                      "Zoloft","Advil","Ambien","Lasix","Prilosec","Desyrel","Diovan","Ultram","Cymbalta","Coumadin","Norvasc","Percocet","Seroquel","Phenergan","Flonase","Xanax","Klonopin",
+                      "Lotensin","Mobic","Celexa","Keflex","Spiriva","Neurontin","Abilify","K-Tab","Flexeril","Medrol","Concerta","Claritin","Coreg","Soma","Lanoxin","Namenda","Tenormin",
+                      "Valium","OxyContin","Actonel","Folvite","Hyzaar","Deltasone","Omnipred","Fosamax","Protonix","Flomax","Dyazide","Paxil","Suboxone","Vasotec","Mevacor","Actos",
+                      "Pravachol","Prozac","Levemir","Diflucan","Levaquin","Xarelto","Celebrex","Tylenol #2","Nasonex","Cipro","Lyrica","Novolog","Effexor","Ativan","Zetia","Premarin",
+                      "Zyloprim","Pen VK","Januvia","Elavil","Catapres","Xalatan","Vyvanse","Advair","Symbicort","Dexilant","Diabeta","Zyprexa","Detrol","Zantac","Pepcid","Cardizem",
+                      "Lantus","Prinizide"]
+        
+        
+        
+        
+        
+        
+        var answers = ["Levothyroxine", "Hydrocodone/APAP","Amoxicillin","Lisinopril","Esomeprazole","Atorvastatin","Simvastatin","Clopidogrel","MonteluKast","Rosuvastatin","Metoprolol",
+                            "Escitalopram","Azithromycin","Albuterol","Hydrochlorothiazide","Metformin","Sertraline","Ibuprofen","Zolpidem","Furosemide","Omeprazole","Trazodone","Valsartan",
+                            "Tramadol","Duloxetine","Warfarin","Amloddipine","Oxycodone/APAP","Quetiapine","Promethazine","Fluticasone","Alprazolam","Clonazepam","Benazepril","Meloxicam",
+                            "Citalopram","Cephalexin","Tiotropium","Gabapentin","Aripiprazole","Potassium","Cyclobenzaprine","Methylprednisolone","Methylphenidate","Loratadine","Carvedilol",
+                            "Carisoprodol","Digoxin","Memantine","Atenolol","Diazepam","Oxycodone","Risedronate","Folic Acid","Losartan + HCTZ","Prednisone","Prednisolone","Alendronate",
+                            "Pantoprazole","Tamsulosin","Triamterene + HCTZ","Paroxetine","Buprenorphine + Naloxone","Enalapril","Lovastatin","Pioglitazone","Pravastatin","Fluoxetine",
+                            "Insulin Detemir","Fluconaxole","Levofloxacin","Rivaroxaban","Celecoxib","Codeine/APAP","Mometasone","Ciprofloxacin","Pregabalin","Insulin Aspart","Venlafaxine",
+                            "Lorazepam","Ezetimibe","Estrogen","Allopurinol","Penicillin","Sitagliptin","Amitriptyline","Clonidine","Latanoprost","Lisdexamfetamine","Fluticasone + Salmeterol",
+                            "Budesonide + Formoterol","Dexlansoprazole","Glyburide","Olanzapine","Tolterodine","Ranitidine","Famotidine","Diltiazem","Insulin Glargine","Lisinopril + HCTZ"] // Array that holds the brandnames
+                            
+        
+        
+        /*var answers1 = ["Levothyroxine", "Hydrocodone/APAP","Amoxicillin","Lisinopril","Esomeprazole","Atorvastatin","Simvastatin","Clopidogrel","MonteluKast","Rosuvastatin","Metoprolol",
+                            "Escitalopram","Azithromycin","Albuterol","Hydrochlorothiazide","Metformin","Sertraline","Ibuprofen","Zolpidem","Furosemide","Omeprazole","Trazodone","Valsartan",
+                            "Tramadol","Duloxetine","Warfarin","Amloddipine","Oxycodone/APAP","Quetiapine","Promethazine","Fluticasone","Alprazolam","Clonazepam","Benazepril","Meloxicam",
+                            "Citalopram","Cephalexin","Tiotropium","Gabapentin","Aripiprazole","Potassium","Cyclobenzaprine","Methylprednisolone","Methylphenidate","Loratadine","Carvedilol",
+                            "Carisoprodol","Digoxin","Memantine","Atenolol","Diazepam","Oxycodone","Risedronate","Folic Acid","Losartan + HCTZ","Prednisone","Prednisolone","Alendronate",
+                            "Pantoprazole","Tamsulosin","Triamterene + HCTZ","Paroxetine","Buprenorphine + Naloxone","Enalapril","Lovastatin","Pioglitazone","Pravastatin","Fluoxetine",
+                            "Insulin Detemir","Fluconaxole","Levofloxacin","Rivaroxaban","Celecoxib","Codeine/APAP","Mometasone","Ciprofloxacin","Pregabalin","Insulin Aspart","Venlafaxine",
+                            "Lorazepam","Ezetimibe","Estrogen","Allopurinol","Penicillin","Sitagliptin","Amitriptyline","Clonidine","Latanoprost","Lisdexamfetamine","Fluticasone + Salmeterol",
+                            "Budesonide + Formoterol","Dexlansoprazole","Glyburide","Olanzapine","Tolterodine","Ranitidine","Famotidine","Diltiazem","Insulin Glargine","Lisinopril + HCTZ"] // Array that holds the answers */
+        
+        
+        var random1 = Math.floor(Math.random() * brandName1.length);
+        
+        
+        function submit() {
+            
+             var user = input1.value;
+            if(random1 == 0 && user == answers[0]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+                
+            } else if (random1 == 1 && user == answers[1]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+                
+            } 
+            
+            else if (random1 == 2 && user == answers[2]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else if (random1 == 3 && user == answers[3]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else if (random1 == 4 && user == answers[4]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else if (random1 == 5 && user == answers[5]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else if (random1 == 6 && user == answers[6]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else if (random1 == 7 && user == answers[7]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else if (random1 == 8 && user == answers[8]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else if (random1 == 9 && user == answers[9]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else if (random1 == 10 && user == answers[10]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else if (random1 == 11 && user == answers[11]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else if (random1 == 12 && user == answers[12]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else if (random1 == 13 && user == answers[13]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else if (random1 == 14 && user == answers[14]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else if (random1 == 15 && user == answers[15]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else if (random1 == 16 && user == answers[16]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else if (random1 == 17 && user == answers[17]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else if (random1 == 18 && user == answers[18]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else if (random1 == 19 && user == answers[19]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 20 && user == answers[20]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 21 && user == answers[21]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 22 && user == answers[22]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 23 && user == answers[23]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 24 && user == answers[24]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 25 && user == answers[25]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 26 && user == answers[26]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 27 && user == answers[27]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 28 && user == answers[28]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 29 && user == answers[29]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 30 && user == answers[30]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 31 && user == answers[31]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 32 && user == answers[32]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 33 && user == answers[33]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 34 && user == answers[34]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 35 && user == answers[35]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 36 && user == answers[36]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 37 && user == answers[37]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 38 && user == answers[38]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 39 && user == answers[39]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 40 && user == answers[40]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 41 && user == answers[41]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 42 && user == answers[42]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 43 && user == answers[43]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 44 && user == answers[44]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 45 && user == answers[45]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 46 && user == answers[46]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 47 && user == answers[47]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 48 && user == answers[48]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 49 && user == answers[49]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 50 && user == answers[50]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 51 && user == answers[51]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 52 && user == answers[52]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 53 && user == answers[53]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 54 && user == answers[54]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 55 && user == answers[55]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 56 && user == answers[56]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 57 && user == answers[57]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 58 && user == answers[58]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 59 && user == answers[59]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 60 && user == answers[60]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 61 && user == answers[61]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 62 && user == answers[62]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 63 && user == answers[63]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 64 && user == answers[64]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 65 && user == answers[65]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 66 && user == answers[66]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 67 && user == answers[67]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 68 && user == answers[68]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 69 && user == answers[69]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 71 && user == answers[71]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 72 && user == answers[72]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 73 && user == answers[73]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 74 && user == answers[74]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 75 && user == answers[75]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 76 && user == answers[76]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 77 && user == answers[77]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 78 && user == answers[78]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 79 && user == answers[79]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 80 && user == answers[80]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 81 && user == answers[81]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 82 && user == answers[82]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 83 && user == answers[83]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 84 && user == answers[84]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 85 && user == answers[85]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 86 && user == answers[86]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 87 && user == answers[87]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 88 && user == answers[88]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 89 && user == answers[89]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 90 && user == answers[90]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 91 && user == answers[91]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 92 && user == answers[92]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 93 && user == answers[93]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 94 && user == answers[94]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 95 && user == answers[95]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 96 && user == answers[96]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 97 && user == answers[97]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 98 && user == answers[98]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            else if (random1 == 99 && user == answers[99]) {
+                document.getElementById("answer1").innerHTML = "Correct!!";
+            }
+            
+            else {
+                document.getElementById("answer1").innerHTML = "Incorrect!!";
+            }
+                
+            
+        }
+        
+        
+        
+        
+        
+        document.getElementById("name1").innerHTML = brandName1[random1];
+        
+            
+            /*$(document).ready( function() {
+                
+                $("button").click( function(){
+                    
+                    // Checks to see if user enters no answer
+                    if( $("#q1").val() == "") {
+                        alert ("You have to enter an answer");
+                    }
+                    
+                    // Was missing a #, but fixed it
+                    // Q1
+                    if ( $("#q1") .val() == "Hydrocodone/APAP") {
+                        
+                        $("#feedback1").html("Correct!");
+                        
+                    } else {
+                        
+                        $("#feedback1").html("Incorrect! The correct way to spell it is Hydrocodone/APAP");
+                    }
+                    
+                    //Q2
+                    if ( $("#q2").val() == "Advil") {
+                        
+                        $("#feedback2").html("Correct!")
+                        
+                    } else {
+                        $("#feedback2").html("Incorrect! The correct answer is Advil");
+                    }
+                    
+                    //Q3
+                    
+                    if ($("#q3").val() == "Cholesterol") {
+                        
+                        $("#feedback3").html("Correct!");
+                        
+                    } else {
+                        $("#feedback3").html("Incorrect! Zocor is used for Cholesterol");
+                    }
+                    
+                    
+                    
+                })
+                
+            }) */
+        </script> 
+</html>

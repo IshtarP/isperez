@@ -10,7 +10,7 @@
             h1{
                 text-align:center;
             }
-           #box {
+           body {
                text-align:center;
            }
            
@@ -23,59 +23,51 @@
     </head>
     <body>
         
-        <p id="question1"> Spell the generic name of <text id="name1"></text></p>
+        <p id="question1"> 1. Type the generic name of <text id="name1"></text></p>
         <div id="disappear1">
-        <input type="text" id="input1" /><button onclick="submit1()">Submit</button>
-        </div>
+        <input type="text" id="input1" />
+        </div> 
         <p id="answer1"></p>
         <p id="button1"></p>
+        <p id="rightAnswer1"></p>
+        <br>
         
         
-        <!-- <div id="box">
-        <h1> Drug list Questions</h1>
-        
-        <!-- Where the questions will be at 
-        
-        <Strong>1. Spell the generic name of Vicodin </strong>
-        
-        <input id="q1" type="text">
-        
-        <div id="feedback1"></div>
-        
-        <br/>
-        
-        <strong>2. What is the brand name of Ibuprofen:</strong>
-        
-        <!-- Creates the drop down menu 
-        <select id="q2">
-            <option value="" >Select an option</option>
-            <option value="Lasix">Lasix</option>
-            <option value="Diovan">Diovan</option>
-            <option value="Advil">Advil</option>
-        </select>
-        
-        <div id="feedback2"></div>
-        <br/>
-        
-        <strong>3. Zocor is used for </strong>
-        
-        <!-- Drop down menu 
-        <Select id="q3">
-            <option value="" >Select an option</option>
-            <option value="Cholesterol">Cholesterol</option>
-            <option value="Asthma">Asthma</option>
-            <option value="G.E.R.D">G.E.R.D</option>
-        </Select>
-        
-        <div id="feedback3"></div>
         
         
-
+        <p id="question2"> 2. (Choose the correct answer) What is the purpose of (either generic or brand name) </p>
+        <div id="disappear1">
+        <form>
+          <input type="radio" name="gender" value="a"> a<br>
+          <input type="radio" name="gender" value="b"> b<br>
+          <input type="radio" name="gender" value="c"> c<br>  
+        </form>
+        </div>
         
-    <button> Submit Quiz </button>
-    
-    </div>-->
-    
+        
+        
+        
+        
+        
+        <p id="question2"> 3. Type the brand name of <text id="name2"></text></p>
+        <div id="disappear1">
+        <input type="text" id="input2" />
+        </div>
+        <p id="answer2"></p>
+        <p id="rightAnswer2"></p>
+        
+        
+        
+        
+        
+        
+        
+        <div id="disappear1">
+        <br>
+        <button onclick="submit1()">Submit</button>
+        </div> 
+        
+        <button onclick=btn1()>Next</button>
     
     
     <script>
@@ -108,617 +100,1198 @@
                             "Lorazepam","Ezetimibe","Estrogen","Allopurinol","Penicillin","Sitagliptin","Amitriptyline","Clonidine","Latanoprost","Lisdexamfetamine","Fluticasone + Salmeterol",
                             "Budesonide + Formoterol","Dexlansoprazole","Glyburide","Olanzapine","Tolterodine","Ranitidine","Famotidine","Diltiazem","Insulin Glargine","Lisinopril + HCTZ"] // Array that holds the brandnames
                             
-        
-        
-        /*var answers1 = ["Levothyroxine", "Hydrocodone/APAP","Amoxicillin","Lisinopril","Esomeprazole","Atorvastatin","Simvastatin","Clopidogrel","MonteluKast","Rosuvastatin","Metoprolol",
-                            "Escitalopram","Azithromycin","Albuterol","Hydrochlorothiazide","Metformin","Sertraline","Ibuprofen","Zolpidem","Furosemide","Omeprazole","Trazodone","Valsartan",
-                            "Tramadol","Duloxetine","Warfarin","Amloddipine","Oxycodone/APAP","Quetiapine","Promethazine","Fluticasone","Alprazolam","Clonazepam","Benazepril","Meloxicam",
-                            "Citalopram","Cephalexin","Tiotropium","Gabapentin","Aripiprazole","Potassium","Cyclobenzaprine","Methylprednisolone","Methylphenidate","Loratadine","Carvedilol",
-                            "Carisoprodol","Digoxin","Memantine","Atenolol","Diazepam","Oxycodone","Risedronate","Folic Acid","Losartan + HCTZ","Prednisone","Prednisolone","Alendronate",
-                            "Pantoprazole","Tamsulosin","Triamterene + HCTZ","Paroxetine","Buprenorphine + Naloxone","Enalapril","Lovastatin","Pioglitazone","Pravastatin","Fluoxetine",
-                            "Insulin Detemir","Fluconaxole","Levofloxacin","Rivaroxaban","Celecoxib","Codeine/APAP","Mometasone","Ciprofloxacin","Pregabalin","Insulin Aspart","Venlafaxine",
-                            "Lorazepam","Ezetimibe","Estrogen","Allopurinol","Penicillin","Sitagliptin","Amitriptyline","Clonidine","Latanoprost","Lisdexamfetamine","Fluticasone + Salmeterol",
-                            "Budesonide + Formoterol","Dexlansoprazole","Glyburide","Olanzapine","Tolterodine","Ranitidine","Famotidine","Diltiazem","Insulin Glargine","Lisinopril + HCTZ"] // Array that holds the answers */
+        // Array that holds the purpose of the drug
+        var purpose = ["Thyroid Hormone","Pain Relief","Anti-Biotic","A.C.E. Inhibitor","G.E.R.D","Cholesterol","Cholesterol","Anti-Platelet","Asthma","Cholesterol","Beta Blocker","Anti-Depressant",
+                        "Anti-Biotic","Asthma Inhaler","Diuretic","Anti-Diabetic","Anti-Depressant","N.S.A.I.D","Insomnia","Diuretic","G.E.R.D","Anti-Depressant","A.2.R.B","Pain Relief","Anti-Depressant",
+                        "Blood Thinner","Calc. Chnl.Blkr","Pain Relief","Anti-Psychotic","Anti-Histamine","Allergies","Anti-Anxiety","Anti-Anxiety","ACE Inhibitor","NSAID(Arthritis","Anti-Depressant",
+                        "Anti-Biotic","C.O.P.D","Anti-Epileptic","Antipsychotic","Electrolyte","Muscle Relaxer","Corticosteroid","A.D.H.D","Allergies","C.H.F.","Alzheimers","Beta Blocker","Anti-Anxiety",
+                        "Pain Relief","Osteoporosis","Supplement","Hypertension","Anti-Inflammatory","Anti-Inflammatory","Osteoporosis","G.E.R.D","Freq. Urination","Diuretic Combo","Anti=Depressant","Opiate Addiction",
+                        "A.C.E. Inhibitor","Cholesterol","Diabetes","Cholesterol","Anti-Depressant","Long-Acting Insulin","Anti-Fungal","Anti-Biotic","Anti-Biotic","Blood Thinner","N.S.A.I.D","Pain Relief","Allergies",
+                        "Anti-Biotic","Anti-Convulsant","Rapid-Acting Insulin","Anti-Depressant","Anti-Anxiety","Cholesterol","Menopause","Anti-gout","Anti-Biotic","Diabetes","Anti-Depressant","Hypertension","Glaucoma",
+                        "A.D.H.D","Asthma/COPD","Asthma/COPD","G.E.R.D","Diabetes","Anti-Psychotic","Overactive Bladder","G.E.R.D","G.E.R.D","Hypertension","Long-Acting Insulin","Hypertension"]
         
         
         var random1 = Math.floor(Math.random() * brandName1.length);
+        var random2 = Math.floor(Math.random() * answers.length);
+        
         
         
         function submit1() {
             
             var user = input1.value;
-            if(random1 == 0 && user == answers[0]) {
+            var user = input2.value;
+            if(random1 == 0 && user == answers[0] ) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
                 
             } else if (random1 == 1 && user == answers[1]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
                 
             } 
             
             else if (random1 == 2 && user == answers[2]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             
             else if (random1 == 3 && user == answers[3]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             
             else if (random1 == 4 && user == answers[4]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             
             else if (random1 == 5 && user == answers[5]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             
             else if (random1 == 6 && user == answers[6]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             
             else if (random1 == 7 && user == answers[7]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             
             else if (random1 == 8 && user == answers[8]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             
             else if (random1 == 9 && user == answers[9]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             
             else if (random1 == 10 && user == answers[10]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             
             else if (random1 == 11 && user == answers[11]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             
             else if (random1 == 12 && user == answers[12]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             
             else if (random1 == 13 && user == answers[13]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             
             else if (random1 == 14 && user == answers[14]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             
             else if (random1 == 15 && user == answers[15]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             
             else if (random1 == 16 && user == answers[16]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             
             else if (random1 == 17 && user == answers[17]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             
             else if (random1 == 18 && user == answers[18]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             
             else if (random1 == 19 && user == answers[19]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 20 && user == answers[20]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 21 && user == answers[21]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 22 && user == answers[22]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 23 && user == answers[23]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 24 && user == answers[24]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 25 && user == answers[25]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 26 && user == answers[26]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 27 && user == answers[27]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 28 && user == answers[28]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 29 && user == answers[29]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 30 && user == answers[30]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 31 && user == answers[31]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 32 && user == answers[32]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 33 && user == answers[33]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 34 && user == answers[34]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 35 && user == answers[35]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 36 && user == answers[36]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 37 && user == answers[37]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 38 && user == answers[38]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 39 && user == answers[39]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 40 && user == answers[40]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 41 && user == answers[41]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 42 && user == answers[42]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 43 && user == answers[43]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 44 && user == answers[44]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 45 && user == answers[45]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 46 && user == answers[46]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 47 && user == answers[47]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 48 && user == answers[48]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 49 && user == answers[49]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 50 && user == answers[50]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 51 && user == answers[51]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 52 && user == answers[52]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 53 && user == answers[53]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 54 && user == answers[54]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 55 && user == answers[55]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 56 && user == answers[56]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 57 && user == answers[57]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 58 && user == answers[58]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 59 && user == answers[59]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 60 && user == answers[60]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 61 && user == answers[61]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 62 && user == answers[62]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 63 && user == answers[63]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 64 && user == answers[64]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 65 && user == answers[65]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 66 && user == answers[66]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 67 && user == answers[67]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 68 && user == answers[68]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 69 && user == answers[69]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 71 && user == answers[71]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 72 && user == answers[72]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 73 && user == answers[73]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+             //   document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 74 && user == answers[74]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 75 && user == answers[75]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 76 && user == answers[76]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 77 && user == answers[77]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 78 && user == answers[78]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 79 && user == answers[79]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 80 && user == answers[80]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 81 && user == answers[81]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 82 && user == answers[82]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+             //   document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 83 && user == answers[83]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 84 && user == answers[84]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 85 && user == answers[85]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 86 && user == answers[86]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 87 && user == answers[87]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 88 && user == answers[88]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 89 && user == answers[89]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 90 && user == answers[90]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 91 && user == answers[91]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 92 && user == answers[92]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 93 && user == answers[93]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 94 && user == answers[94]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 95 && user == answers[95]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 96 && user == answers[96]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button  onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 97 && user == answers[97]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button t' onclick=btn1()>Next</button>";
+               // document.getElementById("button1").innerHTML = "<button t' onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 98 && user == answers[98]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button ' onclick=btn1()>Next</button>";
+                //document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
             }
             else if (random1 == 99 && user == answers[99]) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
-                document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
-            }
+            } 
+            
+            
+            
+             
+            else if (random2 == 0 && user == brandName1[0]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } else if (random2 == 1 && user == brandName1[1]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } else if (random2 == 2 && user == brandName1[2]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } else if (random2 == 3 && user == brandName1[3]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            
+            else if (random2 == 4 && user == brandName1[4]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            
+            else if (random2 == 5 && user == brandName1[5]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            
+            else if (random2 == 6 && user == brandName1[6]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            
+            else if (random2 == 7 && user == brandName1[7]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            
+           else if (random2 == 8 && user == brandName1[8]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 9 && user == brandName1[9]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+                //document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            
+            else if (random2 == 10 && user == brandName1[10]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            
+            else if (random2 == 11 && user == brandName1[11]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+                //document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            
+            else if (random2 == 12 && user == brandName1[12]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            
+            else if (random2 == 13 && user == brandName1[13]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            
+            else if (random2 == 14 && user == brandName1[14]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+                //document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            
+            else if (random2 == 15 && user == brandName1[15]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            
+            else if (random2 == 16 && user == brandName1[16]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            
+            else if (random2 == 17 && user == brandName1[17]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            
+            else if (random2 == 18 && user == brandName1[18]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+                //document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            
+            else if (random2 == 19 && user == brandName1[19]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 20 && user == brandName1[20]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 22 && user == brandName1[22]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 23 && user == brandName1[23]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 24 && user == brandName1[24]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 25 && user == brandName1[25]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 26 && user == brandName1[26]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 27 && user == brandName1[27]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+            //    document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 28 && user == brandName1[28]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 29 && user == brandName1[29]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 30 && user == brandName1[30]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 31 && user == brandName1[31]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 32 && user == brandName1[32]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 33 && user == brandName1[33]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 34 && user == brandName1[34]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 35 && user == brandName1[35]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 36 && user == brandName1[36]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 37 && user == brandName1[37]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+            //    document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 38 && user == brandName1[38]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 39 && user == brandName1[39]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 40 && user == brandName1[40]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 41 && user == brandName1[41]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 42 && user == brandName1[42]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 43 && user == brandName1[43]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 44 && user == brandName1[44]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 45 && user == brandName1[45]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 46 && user == brandName1[46]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 47 && user == brandName1[47]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 48 && user == brandName1[48]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 49 && user == brandName1[49]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 50 && user == brandName1[50]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 51 && user == brandName1[51]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 52 && user == brandName1[52]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 53 && user == brandName1[53]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 54 && user == brandName1[54]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 55 && user == brandName1[55]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 56 && user == brandName1[56]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 57 && user == brandName1[57]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 58 && user == brandName1[58]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 59 && user == brandName1[59]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 60 && user == brandName1[60]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 61 && user == brandName1[61]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 62 && user == brandName1[62]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+            //    document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 63 && user == brandName1[63]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 64 && user == brandName1[64]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 65 && user == brandName1[65]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 66 && user == brandName1[66]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 67 && user == brandName1[67]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 68 && user == brandName1[68]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 69 && user == brandName1[69]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 70 && user == brandName1[70]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 71 && user == brandName1[71]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 72 && user == brandName1[72]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 73 && user == brandName1[73]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 74 && user == brandName1[74]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 75 && user == brandName1[75]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 76 && user == brandName1[76]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 77 && user == brandName1[77]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 78 && user == brandName1[78]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 79 && user == brandName1[79]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 80 && user == brandName1[80]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 81 && user == brandName1[81]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 82 && user == brandName1[82]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 83 && user == brandName1[83]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 84 && user == brandName1[84]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 85 && user == brandName1[85]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+             //   document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 86 && user == brandName1[86]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 87 && user == brandName1[87]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 88 && user == brandName1[88]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 89 && user == brandName1[89]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 90 && user == brandName1[90]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 91 && user == brandName1[91]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 92 && user == brandName1[92]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+               // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 93 && user == brandName1[93]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 94 && user == brandName1[94]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 95 && user == brandName1[95]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              //  document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 96 && user == brandName1[96]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+              // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+          else if (random2 == 97 && user == brandName1[97]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+                //document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+           else if (random2 == 98 && user == brandName1[98]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+                //document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            else if (random2 == 99 && user == brandName1[99]) {
+                document.getElementById("answer2").innerHTML = "Correct!!";
+                //document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
+                document.getElementById("disappear1").innerHTML = "";
+                
+            } 
+            
             
             else {
                 document.getElementById("answer1").innerHTML = "Incorrect!!";
-                document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
-                //document.getElementById("disappear1").innerHTML = "";
+                document.getElementById("answer2").innerHTML = "Incorrect!!";
+                document.getElementById("rightAnswer1").innerHTML = " The right answer is: " + answers[random1];
+                document.getElementById("rightAnswer2").innerHTML = " The right answer is: " + brandName1[random2];
+                document.getElementById("disappear1").innerHTML = "";
+             
+               
+              
+              
             }
                 
             
         }
+      
         
         
         
         
         
         document.getElementById("name1").innerHTML = brandName1[random1];
+        document.getElementById("name2").innerHTML = answers[random2];
+        
         
         
          function btn1() {
             random1 = Math.floor(Math.random() * brandName1.length);
+            random2 = Math.floor(Math.random() * answers.length);
+         
             document.getElementById("name1").innerHTML = brandName1[random1];
+            document.getElementById("name2").innerHTML = answers[random2];
             document.getElementById("button1").innerHTML = "";
-            document.getElementById("disappear1").innerHTML = "<input type=text id=input1 /><button onclick=submit1()>Submit</button>";
+            document.getElementById("disappear1").innerHTML = "<input type=text id=input1 />";
+            document.getElementById("disappear1").innerHTML = "<input type=text id=input2/>";
             document.getElementById("answer1").innerHTML = "";
+            document.getElementById("answer2").innerHTML = "";
+            document.getElementById("rightAnswer1").innerHTML = ""; // Hides the correct annswer once next is pressed
+            document.getElementById("rightAnswer2").innerHTML = "";
         }
         
         
         
-        
-        
-        
-        
-        
-        
+
             
-            /*$(document).ready( function() {
-                
-                $("button").click( function(){
-                    
-                    // Checks to see if user enters no answer
-                    if( $("#q1").val() == "") {
-                        alert ("You have to enter an answer");
-                    }
-                    
-                    // Was missing a #, but fixed it
-                    // Q1
-                    if ( $("#q1") .val() == "Hydrocodone/APAP") {
-                        
-                        $("#feedback1").html("Correct!");
-                        
-                    } else {
-                        
-                        $("#feedback1").html("Incorrect! The correct way to spell it is Hydrocodone/APAP");
-                    }
-                    
-                    //Q2
-                    if ( $("#q2").val() == "Advil") {
-                        
-                        $("#feedback2").html("Correct!")
-                        
-                    } else {
-                        $("#feedback2").html("Incorrect! The correct answer is Advil");
-                    }
-                    
-                    //Q3
-                    
-                    if ($("#q3").val() == "Cholesterol") {
-                        
-                        $("#feedback3").html("Correct!");
-                        
-                    } else {
-                        $("#feedback3").html("Incorrect! Zocor is used for Cholesterol");
-                    }
-                    
-                    
-                    
-                })
-                
-            }) */
+            
+                     
         </script> 
     </body>
 </html>

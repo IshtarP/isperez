@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title> Blancas Drug list </title>
+        <title>  Drug list </title>
         
         <!-- Needed for javascript -->
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -33,8 +33,7 @@
         <br>
         
         
-        
-        
+
         <p id="question2"> 2. (Choose the correct answer) What is the purpose of (either generic or brand name) </p>
         <div id="disappear1">
         <form>
@@ -44,23 +43,15 @@
         </form>
         </div>
         
+    
         
-        
-        
-        
-        
-        <p id="question2"> 3. Type the brand name of <text id="name2"></text></p>
-        <div id="disappear1">
+        <p id="question3"> 3. Type the brand name of <text id="name2"></text></p>
+        <div id="disappear2">
         <input type="text" id="input2" />
         </div>
         <p id="answer2"></p>
         <p id="rightAnswer2"></p>
-        
-        
-        
-        
-        
-        
+    
         
         <div id="disappear1">
         <br>
@@ -112,14 +103,14 @@
         
         
         var random1 = Math.floor(Math.random() * brandName1.length);
-        var random2 = Math.floor(Math.random() * answers.length);
+        //var random2 = Math.floor(Math.random() * answers.length);
         
         
         
         function submit1() {
             
-            var user = input1.value;
-            var user = input2.value;
+             var user = input1.value;
+           // var user = input2.value;
             if(random1 == 0 && user == answers[0] ) {
                 document.getElementById("answer1").innerHTML = "Correct!!";
                 //document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
@@ -638,7 +629,7 @@
             
             
              
-            else if (random2 == 0 && user == brandName1[0]) {
+           /* else if (random2 == 0 && user == brandName1[0]) {
                 document.getElementById("answer2").innerHTML = "Correct!!";
                // document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
@@ -1243,18 +1234,17 @@
                 //document.getElementById("button1").innerHTML = "<button onclick=btn1()>Next</button>";
                 document.getElementById("disappear1").innerHTML = "";
                 
-            } 
+            } */ 
             
             
             else {
                 document.getElementById("answer1").innerHTML = "Incorrect!!";
-                document.getElementById("answer2").innerHTML = "Incorrect!!";
+                //document.getElementById("answer2").innerHTML = "Incorrect!!";
                 document.getElementById("rightAnswer1").innerHTML = " The right answer is: " + answers[random1];
-                document.getElementById("rightAnswer2").innerHTML = " The right answer is: " + brandName1[random2];
+               // document.getElementById("rightAnswer2").innerHTML = " The right answer is: " + brandName1[random2];
                 document.getElementById("disappear1").innerHTML = "";
+                
              
-               
-              
               
             }
                 
@@ -1262,28 +1252,24 @@
         }
       
         
-        
-        
-        
-        
         document.getElementById("name1").innerHTML = brandName1[random1];
-        document.getElementById("name2").innerHTML = answers[random2];
+       // document.getElementById("name2").innerHTML = answers[random2];
         
         
         
          function btn1() {
             random1 = Math.floor(Math.random() * brandName1.length);
-            random2 = Math.floor(Math.random() * answers.length);
+           // random2 = Math.floor(Math.random() * answers.length);
          
             document.getElementById("name1").innerHTML = brandName1[random1];
-            document.getElementById("name2").innerHTML = answers[random2];
+            //document.getElementById("name2").innerHTML = answers[random2];
             document.getElementById("button1").innerHTML = "";
             document.getElementById("disappear1").innerHTML = "<input type=text id=input1 />";
-            document.getElementById("disappear1").innerHTML = "<input type=text id=input2/>";
+           // document.getElementById("disappear2").innerHTML = "<input type=text id=input2/>";
             document.getElementById("answer1").innerHTML = "";
-            document.getElementById("answer2").innerHTML = "";
+            //document.getElementById("answer2").innerHTML = "";
             document.getElementById("rightAnswer1").innerHTML = ""; // Hides the correct annswer once next is pressed
-            document.getElementById("rightAnswer2").innerHTML = "";
+           // document.getElementById("rightAnswer2").innerHTML = "";
         }
         
         

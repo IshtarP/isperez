@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Update Drug quiz </title>
+        
+        <!-- Needed for javascript -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <style>
+            h1{
+                text-align:center;
+            }
+           body {
+               text-align:center;
+           }
+           
+        
+        </style>
+        
+        <!-- Javascript -->
+        
+    </head>
+    <body>
+        
+        <p id="forBrandName"></p>
+        
+        <p id="forGenericName">
+            
+        <p id="forPurpose"></p>    
+        </p>
+        
+        
+        <button onclick="submit()">Submit</button>
+        
+        <br>
+        
+        <button onclick="next()">Next</button>
+        
+        <script>
+        
+                var myQuestions = [
+        	{
+        		question: "Type the generic name of:",
+        		answers: {
+        			genericName
+        		},
+        		
+        	},
+        	{
+        		question: "Type the brandName of:",
+        		answers: {
+        			genericName
+        		},
+        		
+        	}
+        ];
+        
+        
+        
+        
+        
+        
+            
+            // Array with the questions we need to use 
+            //var theQuestions = ["Type the generic name of:" , "Type the brand name of:","What is the purpose of:"]
+            
+            
+            // Array that holds the brand name
+            var brandName = ["Synthroid","Vicodin","Amoxil","Prinivil","Nexium","Lipitor","Zocor","Plavix","Singulair","Crestor","Lopressor","Lexapro","Zithromax","ProAir HFA","HCTZ","Glucophage",
+                      "Zoloft","Advil","Ambien","Lasix","Prilosec","Desyrel","Diovan","Ultram","Cymbalta","Coumadin","Norvasc","Percocet","Seroquel","Phenergan","Flonase","Xanax","Klonopin",
+                      "Lotensin","Mobic","Celexa","Keflex","Spiriva","Neurontin","Abilify","K-Tab","Flexeril","Medrol","Concerta","Claritin","Coreg","Soma","Lanoxin","Namenda","Tenormin",
+                      "Valium","OxyContin","Actonel","Folvite","Hyzaar","Deltasone","Omnipred","Fosamax","Protonix","Flomax","Dyazide","Paxil","Suboxone","Vasotec","Mevacor","Actos",
+                      "Pravachol","Prozac","Levemir","Diflucan","Levaquin","Xarelto","Celebrex","Tylenol #2","Nasonex","Cipro","Lyrica","Novolog","Effexor","Ativan","Zetia","Premarin",
+                      "Zyloprim","Pen VK","Januvia","Elavil","Catapres","Xalatan","Vyvanse","Advair","Symbicort","Dexilant","Diabeta","Zyprexa","Detrol","Zantac","Pepcid","Cardizem",
+                      "Lantus","Prinizide"]
+        
+            
+            // Array for the generic name
+            var genericName = ["Levothyroxine", "Hydrocodone/APAP","Amoxicillin","Lisinopril","Esomeprazole","Atorvastatin","Simvastatin","Clopidogrel","MonteluKast","Rosuvastatin","Metoprolol",
+                            "Escitalopram","Azithromycin","Albuterol","Hydrochlorothiazide","Metformin","Sertraline","Ibuprofen","Zolpidem","Furosemide","Omeprazole","Trazodone","Valsartan",
+                            "Tramadol","Duloxetine","Warfarin","Amloddipine","Oxycodone/APAP","Quetiapine","Promethazine","Fluticasone","Alprazolam","Clonazepam","Benazepril","Meloxicam",
+                            "Citalopram","Cephalexin","Tiotropium","Gabapentin","Aripiprazole","Potassium","Cyclobenzaprine","Methylprednisolone","Methylphenidate","Loratadine","Carvedilol",
+                            "Carisoprodol","Digoxin","Memantine","Atenolol","Diazepam","Oxycodone","Risedronate","Folic Acid","Losartan + HCTZ","Prednisone","Prednisolone","Alendronate",
+                            "Pantoprazole","Tamsulosin","Triamterene + HCTZ","Paroxetine","Buprenorphine + Naloxone","Enalapril","Lovastatin","Pioglitazone","Pravastatin","Fluoxetine",
+                            "Insulin Detemir","Fluconaxole","Levofloxacin","Rivaroxaban","Celecoxib","Codeine/APAP","Mometasone","Ciprofloxacin","Pregabalin","Insulin Aspart","Venlafaxine",
+                            "Lorazepam","Ezetimibe","Estrogen","Allopurinol","Penicillin","Sitagliptin","Amitriptyline","Clonidine","Latanoprost","Lisdexamfetamine","Fluticasone + Salmeterol",
+                            "Budesonide + Formoterol","Dexlansoprazole","Glyburide","Olanzapine","Tolterodine","Ranitidine","Famotidine","Diltiazem","Insulin Glargine","Lisinopril + HCTZ"] // Array that holds the brandnames
+                            
+            
+            // Array for the purpose
+            var purpose = ["Thyroid Hormone","Pain Relief","Anti-Biotic","A.C.E. Inhibitor","G.E.R.D","Cholesterol","Cholesterol","Anti-Platelet","Asthma","Cholesterol","Beta Blocker","Anti-Depressant",
+                        "Anti-Biotic","Asthma Inhaler","Diuretic","Anti-Diabetic","Anti-Depressant","N.S.A.I.D","Insomnia","Diuretic","G.E.R.D","Anti-Depressant","A.2.R.B","Pain Relief","Anti-Depressant",
+                        "Blood Thinner","Calc. Chnl.Blkr","Pain Relief","Anti-Psychotic","Anti-Histamine","Allergies","Anti-Anxiety","Anti-Anxiety","ACE Inhibitor","NSAID(Arthritis","Anti-Depressant",
+                        "Anti-Biotic","C.O.P.D","Anti-Epileptic","Antipsychotic","Electrolyte","Muscle Relaxer","Corticosteroid","A.D.H.D","Allergies","C.H.F.","Alzheimers","Beta Blocker","Anti-Anxiety",
+                        "Pain Relief","Osteoporosis","Supplement","Hypertension","Anti-Inflammatory","Anti-Inflammatory","Osteoporosis","G.E.R.D","Freq. Urination","Diuretic Combo","Anti=Depressant","Opiate Addiction",
+                        "A.C.E. Inhibitor","Cholesterol","Diabetes","Cholesterol","Anti-Depressant","Long-Acting Insulin","Anti-Fungal","Anti-Biotic","Anti-Biotic","Blood Thinner","N.S.A.I.D","Pain Relief","Allergies",
+                        "Anti-Biotic","Anti-Convulsant","Rapid-Acting Insulin","Anti-Depressant","Anti-Anxiety","Cholesterol","Menopause","Anti-gout","Anti-Biotic","Diabetes","Anti-Depressant","Hypertension","Glaucoma",
+                        "A.D.H.D","Asthma/COPD","Asthma/COPD","G.E.R.D","Diabetes","Anti-Psychotic","Overactive Bladder","G.E.R.D","G.E.R.D","Hypertension","Long-Acting Insulin","Hypertension"]
+        
+            
+            
+            // Random Questions
+            var randomQuestions = Math.floor(Math.random() * myQuestions.length );
+            
+            
+            
+            document.getElementById("forBrandName").innerHTML = myQuestions[randomQuestions] + brandName[randomQuestions];
+            document.getElementById("forGenericName").innerHTML = myQuestions[randomQuestions] + genericName[randomQuestions];
+            document.getElementById("forPurpose").innerHTML = myQuestions[randomQuestions] + purpose[randomQuestions];
+            // Function for the button when submitted
+            
+            function submit() {
+                
+                
+                
+                
+            }
+            
+        
+          
+            function next() {
+                
+                randomQuestions = Math.floor(Math.random() * theQuestions.length *  brandName.length);
+              
+                
+                document.getElementById("forBrandName").innerHTML = theQuestions[randomQuestions] + brandName[randomQuestions];
+                document.getElementById("forGenericName").innerHTML = theQuestions[randomQuestions] + genericName[randomQuestions];
+                document.getElementById("forPurpose").innerHTML = theQuestions[randomQuestions] + purpose[randomQuestions];
+                
+            }
+            
+            
+        </script>
+        
+        
+
+    </body>
+</html>

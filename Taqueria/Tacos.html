@@ -10,7 +10,7 @@
         <style>
             h1{
                 text-align: center;
-                font-family: Brush Script MT;
+                font-family: Stencil Std, fantasy;
                 font-size: 56px;
                 
             }
@@ -44,8 +44,8 @@
               }
               
               .jumbotron { 
-                    background-color: lightgray;
-                    color: black;
+                    color: white;
+                    background-image:url(images/restaurant.jpg);
                 
                    
                 }
@@ -68,7 +68,7 @@
                 
                 .navbar {
                     margin-bottom: 0;
-                    background-color: darkgray;
+                    background-color: green;
                     z-index: 9999;
                     border: 0;
                     font-size: 12px !important;
@@ -90,6 +90,10 @@
                     border-color: transparent;
                     color: #fff !important;
                 }
+                
+                
+                
+              
                                                 
             
             
@@ -99,166 +103,174 @@
     <!-- The start of the body -->
     
     <body>
+      <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
         <nav class="navbar navbar-default navbar-fixed-top">
           <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <a class="navbar-brand" >Blanca's Photography</a>
+              <a class="navbar-brand" >Taqueria Milagro</a>
             </div>
             <ul class="nav navbar-nav">
             <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#about">HOME</a></li>
+        <!--<li><a href="#portfolio">PORTFOLIO</a></li>-->
         <li><a href="#pricing">PRICING</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
   </div>
-        </nav>
+</nav>
         
         <div id="g">
         
+        <!-- The jumbotron goes here-->
         
       <div class="jumbotron text-center">
-        <h1>Blanca's Photography</h1> 
-        <p>Travel, Capture, Live, Enjoy
-        </p> 
+        <h1>Taqueria Milagro</h1> 
+        <p>TRADIONAL MEXICAN FOOD</p> 
       </div>
           <!--<p>This is some text.</p> 
           <p>This is another text.</p> -->
           
-          <!-- The carousel starts 
+          <!-- The carousel starts--> 
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators 
+          <!-- Indicators -->
       <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>-->
+            <li data-target="#myCarousel" data-slide-to="2"></li>
           </ol>
+          
+          
+        <!-- Wrapper for slides -->
+        <!-- Pictures of the inside of the restaurant can go here, for now this will be commented it out-->
+        <!--<div class="carousel-inner">
+          <div class="item active">
+            <img  src="images/tacos.jpg" alt="umbrellas">
+          </div>
+      
+          <div class="item">
+            <img src="images/restaurant.jpg" alt="dream">
+          </div>
+      
+          <div class="item">
+            <img src="images/beer.jpg" alt="leaves">
+          </div>-->
+      
+        <!-- Left and right controls 
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>-->
           
           <div class="row">
       <div class="col-md-3">
         <div class="thumbnail">
-          <!--<a href="/w3images/lights.jpg">-->
-            <img src="images/dream.jpg" alt="Lights" style="width:100%">
+            <img src="images/tacos.jpg" alt="Lights" style="width:100%">
           </a>
         </div>
       </div>
       <div class="col-md-3">
         <div class="thumbnail">
           <!--<a href="/w3images/nature.jpg">-->
-            <img src="images/leaves.jpg" alt="Nature" style="width:100%">
+            <img src="images/beer.jpg" alt="Nature" style="width:100%">
           </a>
         </div>
       </div>
       <div class="col-md-3">
         <div class="thumbnail">
           <!--<a href="/w3images/fjords.jpg">-->
-            <img src="images/umbrella.jpg" alt="Fjords" style="width:100%">
+            <img src="images/restaurant.jpg" alt="Fjords" style="width:100%">
           </a>
         </div>
       </div>
     </div>
     
-   <!-- Container (About Section) -->
-
    
-    
-    <!-- Pricing starts here->>
+    <!-- Pricing starts here-->
     
 <div class="container-fluid">
   <div class="text-center">
     <h2>Pricing</h2>
-    <h4>Choose a payment plan that works for you</h4>
   </div>
   <div class="row">
     <div class="col-sm-4">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Basic</h1>
+          <h1>APPETIZERS</h1>
         </div>
         <div class="panel-body">
-          <p><strong>20</strong> Lorem</p>
-          <p><strong>15</strong> Ipsum</p>
-          <p><strong>5</strong> Dolor</p>
-          <p><strong>2</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><strong>CLASSIC NACHOS</strong> $5.25  Tortillas chips topped with melted cheddar cheese, pico de gallo, sour cream and jalapenos</p>
+          <p><strong>SUPER NACHOS</strong> $7.25  Tortilla chips melted cheddar cheese, meat of choice, beans, pico de gallo, guacamole, sour cream and jalapenos</p>
         </div>
         <div class="panel-footer">
-          <h3>$19</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <!--<button class="btn btn-lg">Sign Up</button>-->
         </div>
       </div> 
     </div> 
     <div class="col-sm-4">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Pro</h1>
+          <h1>ENTREES</h1>
+          <p>(Served with rice and beans, homemade tortillas)</p>
         </div>
         <div class="panel-body">
-          <p><strong>50</strong> Lorem</p>
-          <p><strong>25</strong> Ipsum</p>
-          <p><strong>10</strong> Dolor</p>
-          <p><strong>5</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><strong>CARNE AZADA</strong> $14.75 flap meat steak, pico de gallo, house salad</p>
+          <p><strong>BISTEK A LA BANDERA</strong> $13.75 Steak with sauteéd chile poblano pepper, tomatoes onion</p>
         </div>
         <div class="panel-footer">
-          <h3>$29</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <!--<button class="btn btn-lg">Sign Up</button>-->
         </div>
       </div> 
     </div> 
    <div class="col-sm-4">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Premium</h1>
+          <h1>SEAFOOD</h1>
         </div>
         <div class="panel-body">
-          <p><strong>100</strong> Lorem</p>
-          <p><strong>50</strong> Ipsum</p>
-          <p><strong>25</strong> Dolor</p>
-          <p><strong>10</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><strong>CAMARONES AL MOJO DE AJO</strong> $15.85 Shrimp on garlic sauce</p>
+          <p><strong>CAMARONES A LA DIABLA</strong> $15.85 Sauteéd shrimp a la diabla spicy sauce</p>
+          
         </div>
         <div class="panel-footer">
-          <h3>$49</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <!--<button class="btn btn-lg">Sign Up</button>-->
         </div>
       </div> 
     </div> 
   </div>
 </div>
 
+<!-- about section starts here-->
+<div class="container-fluid">
+  <h2>About Company Page</h2>
+</div>
 
+<div class="container-fluid bg-grey">
+  <h2>Our Values</h2>
+  <h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4> 
+  <p><strong>VISION:</strong> Our vision Lorem ipsum..
+</div>
 
-  <!-- Wrapper for slides 
-  <div class="carousel-inner">
-    <div class="item active">
-      <img  src="images/umbrella.jpg" alt="umbrellas">
+<!-- Container (Contact Section) -->
+
+   <!-- Container contact contact goes here-->
+   <div class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p> 
     </div>
 
-    <!--<div class="item">
-      <img src="images/dream.jpg" alt="dream">
-    </div>
 
-    <div class="item">
-      <img src="images/leaves.jpg" alt="leaves">
-    </div>-->
-
-  <!-- Left and right controls 
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>-->
-        
       
     </body>
 </html>

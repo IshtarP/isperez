@@ -1,0 +1,20 @@
+.navbar {
+    padding-bottom: 20px;
+    background-color: transparent; /* It only works if we change the bg-dark to bg-custom */
+}
+
+.nav-link {
+    font-size: 20px;
+}
+
+.navbar-brand {
+    font-size: 30px;
+}
+
+
+/* Use the color theme of the navbar, then use the <ul class then the <nav-item and finally <nav-link */
+.navbar-light .navbar-nav .nav-item .nav-link:hover 
+{
+  transition: .9s;
+  color: darkorange;
+}

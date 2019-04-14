@@ -11,10 +11,22 @@
     font-size: 30px;
 }
 
+.navbar-nav {
+    padding-right: 50px;
+}
 
 /* Use the color theme of the navbar, then use the <ul class then the <nav-item and finally <nav-link */
 .navbar-light .navbar-nav .nav-item .nav-link:hover 
 {
   transition: .9s;
   color: darkorange;
+}
+
+.dropdown-menu:hover {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
 }
